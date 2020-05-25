@@ -7,21 +7,21 @@ export default new Router({
   routes: [
     {
       path: '/',
-      redirect: '/home'
-    },
-    {
-      path: '/home',
-      name: 'HomePage',
-      // 利用路由懒加载 + 合并chunk
-      component: () =>
-        import(/* webpackChunkName: "home" */ '@/views/HomePage/index.vue')
+      redirect: '/home',
+      name: 'Index',
+      component: () => import('@/views/HomePage/index.vue'),
+      children: [
+        {
+          path: '/home',
+          name: 'Home',
+          component: () => import('@/views/HomePage/Home.vue'),
+        }
+      ]
     },
     {
       path: '/aboutus',
       name: 'AboutUs',
-      // 利用路由懒加载 + 合并chunk
-      component: () =>
-        import(/* webpackChunkName: "about" */ '@/views/AboutUs/index.vue')
+      component: () => import('@/views/AboutUs/index.vue')
     }
   ]
 })
