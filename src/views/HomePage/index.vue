@@ -14,6 +14,7 @@ export default {
     }
   },
   mounted(){
+    alert(process.env.NODE_ENV)
     this.askForToken()
   },
   methods: {

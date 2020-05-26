@@ -1,6 +1,6 @@
 import $config from '@/config/index'
 let API_BASE_ROOT = ''
-switch (process.env.VUE_APP_ENV) {
+switch (process.env.NODE_ENV) {
   case 'dev':
     API_BASE_ROOT = $config.apiUrl.dev // 本地开发环境发布目录
     break
