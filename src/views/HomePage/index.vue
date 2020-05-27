@@ -10,7 +10,7 @@ export default {
   name: 'HomePage',
   data () {
     return {
-      msg: '你好，HomePage'
+      msg: '你好，HomePage！master 分支的一次简单提交'
     }
   },
   mounted(){
