@@ -10,7 +10,7 @@ export default {
   name: 'HomePage',
   data () {
     return {
-      msg: '你好啊，HomePage！'
+      msg: '你好啊，HomePage！在develop分支上进行开发尝试'
     }
   },
   mounted(){
