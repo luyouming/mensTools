@@ -11,7 +11,7 @@ export default {
 </script>
 
 <style lang="scss">
-    @import '../static/font/font.css';
+@import '../static/font/font.css';
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
