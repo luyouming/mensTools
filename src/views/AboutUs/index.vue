@@ -9,7 +9,7 @@ export default {
   name: 'AboutUs',
   data () {
     return {
-      msg: '你好，AboutUs'
+      msg: '你好啊，AboutUs！'
     }
   }
 }
