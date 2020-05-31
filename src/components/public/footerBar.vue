@@ -1,5 +1,5 @@
 <template>
-  <el-footer>
+  <el-footer class="footer-container">
       footer-bar
   </el-footer>
 </template>
@@ -10,6 +10,13 @@ export default {
 }
 </script>
 
-<style>
-
+<style lang="scss" scoped>
+.footer-container{
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 26PX;
+  color: white;
+}
 </style>
