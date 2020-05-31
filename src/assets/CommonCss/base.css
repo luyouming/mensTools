@@ -335,3 +335,14 @@ li {
 .color000 {
   color: #000;
 }
+/* 一些开发中公共的样式集合 */
+.DefaultContainerStyle{
+  width: 100%;
+  height: 100%;
+  background-color: blueviolet;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 26PX;
+  color: white;
+}
