@@ -1,17 +1,20 @@
 <template>
   <el-container direction="vertical">
-    <top-bar />
+    <hangingBar />      
+    <top-bar :chosenTabIndex="0" @changePage="gotoPage"/>
     <router-view class="main-page" />
     <footer-bar />
   </el-container>
 </template>
 
 <script>
+import hangingBar from '@/components/public/hangingBar'
 import topBar from '@/components/public/topBar'
 import footerBar from '@/components/public/footerBar'
 export default {
   name: 'Index',
   components: {
+    hangingBar,
     topBar,
     footerBar
   },
@@ -22,6 +25,10 @@ export default {
   mounted(){
   },
   methods: {
+    gotoPage(path){
+      // console.log(path)
+      this.$router.push({path})
+    }
   }
 }
 </script>
