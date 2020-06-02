@@ -111,7 +111,7 @@ export default {
 <style lang="scss">
     .TopBar-container{
       width:100%;
-      // min-height: 104PX;
+      // min-height: 104px;
       display: flex;
       justify-content: flex-end;
       align-items: center;
@@ -120,7 +120,7 @@ export default {
       .nav-centent{float: right;margin-right: 140px;}
       .nav-centent > li > a > .hasDetails {margin-left: 2px;}
       .nav-centent > li{width: 80PX;padding: 32PX 0;display: block;float: left;text-align: center;margin-right: 30PX;position: relative;cursor: pointer;}
-      .nav-centent > li > a{background-color: #fff; padding: 6PX 10PX;border-radius: 50px;width: 86PX;height: 30PX;display: block;font-size: 16PX;font-family: 'PingFang SC';font-weight: 500;line-height: 30PX;color: #000;}
+      .nav-centent > li > a{background-color: #fff; padding: 6PX 10PX;border-radius: 50px;width: 88PX;height: 30PX;display: block;font-size: 16PX;font-family: 'PingFang SC';font-weight: 500;line-height: 30PX;color: #000;}
       .nav-centent > li > .chosenTab {background: #1bacd6;color:#FFF}
       .nav-centent > li:hover > a{height:30PX;line-height: 30PX;background: #1bacd6;color:#FFF }
       .nav-centent > li > a.on{background: #1bacd6;color:#000; }
@@ -133,7 +133,7 @@ export default {
     .nav-centent-phone{
       margin: auto;
       width: 78%;
-      margin-top: 0px;
+      margin-top: 0PX;
       margin-bottom: 0PX;
       position: relative;
       .more{
@@ -179,7 +179,7 @@ export default {
       }
     }
     .navCententPhoneOpen {
-        margin-bottom: 45PX;
+        margin-bottom: 15PX;
     }
     @media screen and (max-width: 1200px) {
       .TopBar-container {
@@ -194,7 +194,7 @@ export default {
             position: absolute;
             top: 0;
             left: 200px;
-            height: 104PX;
+            height: 100%;
             width: 195PX;
           }
       }
@@ -211,7 +211,7 @@ export default {
         .imgPic{
         position: absolute;
         left: 200px;
-        height: 104PX;
+        height: 100%;
       }
       }
     }
