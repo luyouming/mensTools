@@ -1,7 +1,7 @@
 <template>
   <el-container direction="vertical">
     <hangingBar />      
-    <top-bar :chosenTabIndex="2" @changePage="gotoPage"/>
+    <top-bar :chosenTabIndex="3" @changePage="gotoPage"/>
     <router-view class="main-page" />
     <footer-bar />
   </el-container>
