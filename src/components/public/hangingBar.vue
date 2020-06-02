@@ -42,6 +42,8 @@ export default {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
+  // 这块内容暂时不需要了
+  display: none;
   .contentBox{
     float: left;
     display: flex;
