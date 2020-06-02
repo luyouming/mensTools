@@ -190,8 +190,8 @@ export default {
   }
   .Tips{
     width: 100%;
-    min-height: 200px;
-    line-height: 200px;
+    min-height: 68PX;
+    line-height: 68PX;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -200,7 +200,7 @@ export default {
     padding: 0 160px;
     box-sizing: border-box;
     p{
-      font-size: 32px;
+      font-size: 0.13rem;
     }
   }
 }
