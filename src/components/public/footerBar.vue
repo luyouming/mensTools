@@ -228,6 +228,12 @@ export default {
             padding-bottom:50px !important;
           }
         }
+        // 移动端字体需要大一些展示的时候
+        .Tips{
+          p{
+            font-size: 45px;
+          }
+        }
       }
     }
 </style>
