@@ -146,7 +146,7 @@ export default {
       }
       .nav-bar{
         width: 100%;
-        max-height: 730px;
+        // max-height: 500PX;
         overflow-y: auto;
         overflow-x: hidden;
         margin-top: 45PX;
@@ -183,7 +183,7 @@ export default {
     }
     @media screen and (max-width: 1200px) {
       .TopBar-container {
-        padding-top: 104px;
+        padding-top: 55PX;
           .nav-centent-phone{
             display: block;
           }
@@ -194,7 +194,7 @@ export default {
             position: absolute;
             top: 0;
             left: 200px;
-            height: 100%;
+            height: 104PX;
             width: 195PX;
           }
       }

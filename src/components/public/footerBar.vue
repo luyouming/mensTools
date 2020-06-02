@@ -190,17 +190,18 @@ export default {
   }
   .Tips{
     width: 100%;
-    min-height: 68PX;
-    line-height: 68PX;
+    min-height: 60PX;
+    line-height: 60PX;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     background: rgb(42, 42, 42);
     color: #bbb;
     padding: 0 160px;
     box-sizing: border-box;
     p{
-      font-size: 0.13rem;
+      font-size: 18PX;
     }
   }
 }
@@ -231,7 +232,10 @@ export default {
         // 移动端字体需要大一些展示的时候
         .Tips{
           p{
-            font-size: 45px;
+            font-size: 15PX;
+            line-height: 15PX;
+            width: 50%;
+            padding: 0;
           }
         }
       }
