@@ -63,6 +63,7 @@ export default {
   .footerInfo {
     background-color: #000;
     display: flex;
+    flex-direction:row;
     justify-content: center;
     align-items: flex-start;
     font-size: 26PX;
@@ -80,8 +81,8 @@ export default {
       color: #bbb;
       padding: 0 80px;
       .imgPic{
-        width: 200px;
-        height: 150px;
+        width: 210PX;
+        height: 112PX;
       }
       .paragraph{
         text-align: left;
@@ -129,16 +130,16 @@ export default {
         margin: 20px auto;
         img {
           float: left;
-          width: 120px;
-          height: 90px;
+          width: 120PX;
+          height: 90PX;
           border-radius: 2px;
         }
         .news {
            float: left;
-           width: calc(100% - 120px);
+           width: calc(100% - 120PX);
            padding: 0 20px;
-           height: 45px;
-           line-height: 45px;
+           height: 45PX;
+           line-height: 45PX;
            text-align: left;
            box-sizing: border-box;
            .title{
@@ -189,8 +190,8 @@ export default {
   }
   .Tips{
     width: 100%;
-    height: 68PX;
-    line-height: 60PX;
+    min-height: 200px;
+    line-height: 200px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -199,8 +200,34 @@ export default {
     padding: 0 160px;
     box-sizing: border-box;
     p{
-      font-size: 16PX;
+      font-size: 32px;
     }
   }
 }
+@media screen and (max-width: 1200px) {
+      .footer-container {
+        .footerInfo{
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: center;
+          .footerBox{
+            width: 80%;
+          }
+        }
+        // .newsBox{
+        //   .img{
+        //     width: 200px;
+        //     height: 150px;
+        //   }
+        // }
+        .contactWay{
+          margin-bottom: 90px;
+          .main{
+            margin: 30px 0;
+            padding-bottom:50px !important;
+          }
+        }
+      }
+    }
 </style>
