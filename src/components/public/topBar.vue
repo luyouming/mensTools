@@ -1,9 +1,10 @@
 <template>
   <div class="TopBar-container">
+    <img class="imgPic" :src="require(`$static/icon/logo-mens.png`)" alt="">
      <!-- 大于1200PX屏的导航展示 -->
       <ul class="nav-centent">
         <li v-for="(item , index) in navList" :key="item + index" @mouseover="item.isSubShow = true" @mouseout="item.isSubShow = false">
-        <a @click="gotoPage(item.path)"  :class="{chosenTab: chosenTabIndex === index}">{{item.name}}</a>
+        <a @click="gotoPage(item.path)"  :class="{chosenTab: chosenTabIndex === index}">{{item.name}}<i v-show="item.child && item.child.length > 0" class="hasDetails el-icon-arrow-down"></i></a>
         <ul v-show="item.isSubShow">
         <li v-for="(subItems, i) in item.child" :key="subItems + i">
         <a @click="gotoPage(subItems.path)">{{subItems.name}}</a>
@@ -12,7 +13,7 @@
         </li>
       </ul>
       <!-- 小于1200PX屏的导航展示 -->
-      <div class="nav-centent-phone">
+      <div class="nav-centent-phone" :class="{navCententPhoneOpen:showVerticalMenu}">
         <img class="more" @click="showVerticalMenu = !showVerticalMenu" :src="require(`$static/icon/more.png`)" alt="">
         <el-row class="nav-bar">
            <el-col :span="24">
@@ -72,15 +73,15 @@ export default {
         //   { name: '发展历程', path: '/aboutus/devHistory'},
         //   { name: '企业荣誉', path: '/aboutus/honor'},
         // ] },
+        { name: '应用领域', path: '/apparea', isSubShow:false, child: [
+          { name: '所有', path: '/apparea/all'},
+          { name: '简介', path: '/apparea/introduction'}
+        ]},
         { name: '产品技术', path: '/prod', isSubShow:false, child: [
           { name: '产品展示', path: '/prod/show'},
           { name: '产品列表', path: '/prod/list'},
           { name: '产品简介', path: '/prod/introduction'}
         ] },
-        { name: '应用领域', path: '/apparea', isSubShow:false, child: [
-          { name: '所有', path: '/apparea/all'},
-          { name: '简介', path: '/apparea/introduction'}
-        ]},
         { name: '新闻资讯', path: '/news', isSubShow:false, child: [
           { name: '所有新闻', path: '/news/all'},
           { name: '新闻详情', path: '/news/details'}
@@ -110,14 +111,16 @@ export default {
 <style lang="scss">
     .TopBar-container{
       width:100%;
-      min-height: 104PX;
+      // min-height: 104PX;
       display: flex;
       justify-content: flex-end;
       align-items: center;
-      background-color: #f9f9f9;
+      // background-color: #f9f9f9;
+      position: relative;
       .nav-centent{float: right;margin-right: 140px;}
+      .nav-centent > li > a > .hasDetails {margin-left: 2px;}
       .nav-centent > li{width: 80PX;padding: 32PX 0;display: block;float: left;text-align: center;margin-right: 30PX;position: relative;cursor: pointer;}
-      .nav-centent > li > a{background-color: #fff; padding: 6PX 10PX;border-radius: 50px;width: 80PX;height: 30PX;display: block;font-size: 16PX;font-family: 'PingFang SC';font-weight: 500;line-height: 30PX;color: #000;}
+      .nav-centent > li > a{background-color: #fff; padding: 6PX 10PX;border-radius: 50px;width: 86PX;height: 30PX;display: block;font-size: 16PX;font-family: 'PingFang SC';font-weight: 500;line-height: 30PX;color: #000;}
       .nav-centent > li > .chosenTab {background: #1bacd6;color:#FFF}
       .nav-centent > li:hover > a{height:30PX;line-height: 30PX;background: #1bacd6;color:#FFF }
       .nav-centent > li > a.on{background: #1bacd6;color:#000; }
@@ -129,16 +132,16 @@ export default {
     }
     .nav-centent-phone{
       margin: auto;
-      margin-bottom: 45PX;
       width: 78%;
       margin-top: 0px;
+      margin-bottom: 0PX;
       position: relative;
       .more{
-        width: 25PX;
-        height: 25PX;
+        width: 40PX;
+        height: 40PX;
         position: absolute;
-        right: 5px;
-        top: 20px;
+        right: 50px;
+        top: -42px;
         cursor: pointer;
       }
       .nav-bar{
@@ -175,13 +178,24 @@ export default {
         }
       }
     }
+    .navCententPhoneOpen {
+        margin-bottom: 45PX;
+    }
     @media screen and (max-width: 1200px) {
       .TopBar-container {
+        padding-top: 104px;
           .nav-centent-phone{
             display: block;
           }
           .nav-centent{
             display: none;
+          }
+          .imgPic{
+            position: absolute;
+            top: 0;
+            left: 200px;
+            height: 104PX;
+            width: 195PX;
           }
       }
     }
@@ -193,7 +207,12 @@ export default {
         }
         .nav-centent{
            display: block;
-          }
+        }
+        .imgPic{
+        position: absolute;
+        left: 200px;
+        height: 104PX;
+      }
       }
     }
 </style>
