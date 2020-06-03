@@ -1,11 +1,6 @@
 <template>
   <div class="ContactUs-container">
-    <div class="ContactUs-title">
-      <!-- <img :src="require('@/assets/ContactUs/as02.jpg')" alt="" srcset=""> -->
-      <div>
-        <span>联系我们</span>
-      </div>
-    </div>
+    <title-bar text="联系我们" />
     <div class="ContactUs-main">
       <div class="submit-main">
       <div class="main-title">需求 建议 留言</div>
@@ -22,8 +17,12 @@
 </template>
 
 <script>
+import titleBar from '$components/public/titleBar'
 export default {
   name: 'contactUsContact',
+  components: {
+    titleBar
+  },
   data() {
     return {
       data: {
@@ -51,25 +50,6 @@ export default {
 
 <style scoped lang="scss">
 .ContactUs-container{
-  .ContactUs-title{
-    width: 100%;
-    user-select: none;
-    cursor: default;
-    height: 290PX;
-    background: url('~@/assets/ContactUs/as02.jpg') 50% 50%;
-    >div{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 290PX;
-      background-color: rgba(0,0,0,0.5);
-    }
-    span{
-      font-size: 0.8rem;
-      color: white;
-      font-weight: 800;
-    }
-  }
   .ContactUs-main{
     background: url('~@/assets/ContactUs/as03.jpg') no-repeat;
     background-size: cover;
