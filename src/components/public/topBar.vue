@@ -77,6 +77,7 @@ export default {
           { name: '所有', path: '/apparea/all'},
           { name: '简介', path: '/apparea/introduction'}
         ]},
+        // { name: '产品技术', path: '/prod', isSubShow:false},
         { name: '产品技术', path: '/prod', isSubShow:false, child: [
           { name: '产品展示', path: '/prod/show'},
           { name: '产品列表', path: '/prod/list'},
