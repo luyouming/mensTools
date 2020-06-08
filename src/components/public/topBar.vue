@@ -83,9 +83,9 @@ export default {
           { name: '产品列表', path: '/prod/list'},
           { name: '产品简介', path: '/prod/introduction'}
         ] },
-        { name: '新闻资讯', path: '/news', isSubShow:false, child: [
-          { name: '所有新闻', path: '/news/all'},
-          { name: '新闻详情', path: '/news/details'}
+        { name: '新闻资讯', path: '/news/all', isSubShow:false, child: [
+          // { name: '所有新闻', path: '/news/all'},
+          // { name: '新闻详情', path: '/news/details'}
         ]},
         { name: '联系我们', path: '/contactus', isSubShow:false}
         // { name: '联系我们', path: '/contactus', isSubShow:false, child: [

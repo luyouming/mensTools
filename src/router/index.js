@@ -87,11 +87,11 @@ export default new Router({
       component: () => import('@/views/News/index.vue'),
       children: [
         {
-          path: '/News/all',
+          path: '/news/all',
           name: 'newsAll',
           component: () => import('@/views/News/all.vue'),
         }, {
-          path: '/News/details',
+          path: '/news/details',
           name: 'newsDetails',
           component: () => import('@/views/News/details.vue'),
         }
