@@ -223,10 +223,10 @@ export default {
         //   }
         // }
         .contactWay{
-          margin-bottom: 90px;
+          margin-bottom: 40PX;
           .main{
             margin: 30px 0;
-            padding-bottom:50px !important;
+            padding-bottom:55px !important;
           }
         }
         // 移动端字体需要大一些展示的时候
