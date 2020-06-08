@@ -94,6 +94,7 @@ export default {
   padding: 100PX 40PX;
   cursor: default;
   .news-item{
+    user-select: none;
     margin-bottom: 50PX;
     background-color: #fff;
     transition: all 0.3s cubic-bezier(0.7, 0.04, 0.37, 1);
@@ -140,11 +141,16 @@ export default {
       padding: 0 40PX;
     }
     .news-item-title{
+      cursor: pointer;
       font-size: 0.38rem;
       color: #002c42;
       font-weight: 700;
       line-height: 1.5;
       margin-bottom: 0.5rem;
+      transition: all 0.3s ease;
+      &:hover{
+        color: #00c3ed;
+      }
     }
     .news-item-flag{
       .el-icon-folder{
