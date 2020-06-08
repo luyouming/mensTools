@@ -10,6 +10,7 @@ import api from './api/requestAPI.js'
 import ElementUI from 'element-ui'
 import messageBox from './components/MessageBox/messageBox.js'
 import 'element-ui/lib/theme-chalk/index.css'
+import store from "./store"
 
 // 使用element-ui 开发本项目
 Vue.use(ElementUI)
@@ -31,6 +32,7 @@ Object.keys(filters).forEach(key => {
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })

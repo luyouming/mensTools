@@ -9,8 +9,9 @@
                 <div class="thumb">
                   <img :src="item.src" alt="图片">
                 </div>
+                <div class="link"><i class="el-icon-link" /></div>
               </div>
-              <div class="news-item-title">
+              <div class="news-item-title" @click="viewNews(item)">
                 {{ item.title }}
               </div>
               <div class="news-item-flag">
@@ -81,6 +82,12 @@ export default {
       }
       return arr
     }
+  },
+  methods: {
+    viewNews(info) {
+      this.$store.commit('SET_NEWS_INFO', info)
+      this.$router.push('/news/details')
+    }
   }
 }
 </script>
@@ -102,6 +109,7 @@ export default {
     .news-item-img{
       margin-bottom: 40PX;
       width: 100%;
+      position: relative;
       overflow: hidden;
       img{
         transition: all 0.4s ease-in-out;
@@ -128,6 +136,28 @@ export default {
           opacity: 0;
         }
       }
+      .link{
+        cursor: pointer;
+        left: 0;
+        box-sizing: border-box;
+        top: 45%;
+        right: 0;
+        height: 50PX;
+        width: 50PX;
+        color: #fff;
+        padding: 10PX;
+        text-align: center;
+        margin: 0 auto;
+        font-size: 20PX;
+        z-index: 12;
+        opacity: 0;
+        background: #00c3ed;
+        transition: all 0.4s ease-in-out;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
     }
     &:hover{
       transform: translateY(-3px);
@@ -135,6 +165,10 @@ export default {
       .thumb::after{
         transform: scaleY(1);
         opacity: 1;
+      }
+      .link{
+        opacity: 1;
+        transform: rotateY(180deg);
       }
     }
     .news-item-title, .news-item-flag, .news-item-desc, .news-item-details{

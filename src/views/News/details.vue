@@ -1,10 +1,25 @@
 <template>
-  <div class="News-details-container DefaultContainerStyle">新闻详情</div>
+  <div class="News-details-container">
+    <title-bar :text="newsInfo.title" />
+  </div>
 </template>
 
 <script>
+import { mapState } from 'vuex'
+import titleBar from '$components/public/titleBar'
 export default {
-  name: 'newsDetails'
+  name: 'newsDetails',
+  components: {
+    titleBar
+  },
+  computed: {
+    ...mapState({
+      newsInfo: state => state.news.newsInfo
+    })
+  },
+  mounted() {
+    console.log(this.newsInfo)
+  }
 }
 </script>
 
