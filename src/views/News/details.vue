@@ -31,7 +31,18 @@ export default {
 
 <style lang="scss">
 .news-details-main{
-  padding: 30PX 10PX;
+  padding: 30PX 20PX;
+  text-align: left;
+  h5 {
+    font-size: 0.38rem;
+    font-weight: 650;
+    line-height: 1.5;
+    margin-bottom: 0.3rem;
+    margin-top: 0.75rem;
+  }
+  p{
+    margin-bottom: 20PX;
+  }
 }
 .mt-30{
   margin-top: 30PX;
@@ -40,21 +51,24 @@ export default {
   margin-bottom: 30PX;
 }
 .img-fullwidth{
-  width: 80%;
+  width: 100%;
 }
 blockquote {
   position: relative;
   padding: 0;
-  border-left: 2px solid #0073aa;
-  padding-left: 1rem;
-  margin: 15px 0;
+  border-left: 2PX solid #0073aa;
+  padding-left: 0.7rem;
+  margin: 30PX 0 20px 0;
   footer{
+    cite{
+      font-style: italic;
+    }
     color: #888;
-    font-size: 15px;
+    font-size: 0.27rem;
   }
   p {
     color: #444;
-    font-size: 0.5rem;
+    font-size: 0.35rem;
     line-height: 1.7;
   }
 }
