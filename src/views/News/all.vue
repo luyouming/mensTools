@@ -9,8 +9,9 @@
                 <div class="thumb">
                   <img :src="item.src" alt="图片">
                 </div>
+                <div class="link"><i class="el-icon-link" /></div>
               </div>
-              <div class="news-item-title">
+              <div class="news-item-title" @click="viewNews(item)">
                 {{ item.title }}
               </div>
               <div class="news-item-flag">
@@ -43,6 +44,7 @@ export default {
     return {
       newsList: [
         {
+          id: '1',
           title: '2017年苏州工业园区金鸡湖人才计划科技领军人才',
           time: '2020-01-01 00:00:00',
           keyword: '人才,获奖',
@@ -50,6 +52,7 @@ export default {
           desc: '2017年12月27日下午，苏州工业园区第八届金鸡湖人才表彰大会在现代大厦召开，此次大会授予437人“金鸡湖人才”称....'
         },
         {
+          id: '2',
           src: require('@/assets/CommonImg/2.jpg'),
           title: '祝贺我司获得“高新技术企业”荣誉证书',
           time: '2020-01-01 00:00:00',
@@ -57,6 +60,7 @@ export default {
           desc: '苏州美图半导体技术有限公司被授予“高新技术企业”荣誉证书，大大提高了我公司参与各项招投标业务的竞争力，同时也进一步提升了我公司的....'
         },
         {
+          id: '3',
           src: require('@/assets/CommonImg/3.jpg'),
           title: '中国微米纳米技术学会第十八届学术年会暨微系统与纳米工程高层论坛',
           time: '2020-01-01 00:00:00',
@@ -81,6 +85,12 @@ export default {
       }
       return arr
     }
+  },
+  methods: {
+    viewNews(info) {
+      this.$store.commit('SET_NEWS_INFO', info)
+      this.$router.push('/news/details')
+    }
   }
 }
 </script>
@@ -94,6 +104,7 @@ export default {
   padding: 100PX 40PX;
   cursor: default;
   .news-item{
+    user-select: none;
     margin-bottom: 50PX;
     background-color: #fff;
     transition: all 0.3s cubic-bezier(0.7, 0.04, 0.37, 1);
@@ -101,6 +112,7 @@ export default {
     .news-item-img{
       margin-bottom: 40PX;
       width: 100%;
+      position: relative;
       overflow: hidden;
       img{
         transition: all 0.4s ease-in-out;
@@ -127,6 +139,28 @@ export default {
           opacity: 0;
         }
       }
+      .link{
+        cursor: pointer;
+        left: 0;
+        box-sizing: border-box;
+        top: 45%;
+        right: 0;
+        height: 50PX;
+        width: 50PX;
+        color: #fff;
+        padding: 10PX;
+        text-align: center;
+        margin: 0 auto;
+        font-size: 20PX;
+        z-index: 12;
+        opacity: 0;
+        background: #00c3ed;
+        transition: all 0.4s ease-in-out;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
     }
     &:hover{
       transform: translateY(-3px);
@@ -135,16 +169,25 @@ export default {
         transform: scaleY(1);
         opacity: 1;
       }
+      .link{
+        opacity: 1;
+        transform: rotateY(180deg);
+      }
     }
     .news-item-title, .news-item-flag, .news-item-desc, .news-item-details{
       padding: 0 40PX;
     }
     .news-item-title{
+      cursor: pointer;
       font-size: 0.38rem;
       color: #002c42;
       font-weight: 700;
       line-height: 1.5;
       margin-bottom: 0.5rem;
+      transition: all 0.3s ease;
+      &:hover{
+        color: #00c3ed;
+      }
     }
     .news-item-flag{
       .el-icon-folder{
