@@ -1,10 +1,14 @@
 <template>
-  <div class="Apparea-container DefaultContainerStyle">所有</div>
+  <div class="Apparea-container DefaultContainerStyle">
+    <title-bar text="所有" />
+  </div>
 </template>
 
 <script>
+import titleBar from "$components/public/titleBar";
 export default {
-  name: 'appareaAll'
+  name: 'appareaAll',
+  components: { titleBar }
 }
 </script>
 

@@ -1,7 +1,12 @@
 <template>
   <el-container direction="vertical">
     <hangingBar />
-    <top-bar id="topBar" :class="topBarFixed ? 'topBarIsFixed' : '' " :chosenTabIndex="0" @changePage="gotoPage" />
+    <top-bar
+      id="topBar"
+      :class="topBarFixed ? 'topBarIsFixed' : '' "
+      :chosenTabIndex="0"
+      @changePage="gotoPage"
+    />
     <router-view class="main-page" />
     <footer-bar />
   </el-container>
@@ -24,7 +29,10 @@ export default {
     };
   },
   mounted() {
-    window.addEventListener("scroll", this.handleScroll);
+    window.addEventListener("scroll", this.handleScroll, true);
+  },
+  destroyed() {
+    window.removeEventListener("scroll", this.handleScroll, true);
   },
   methods: {
     gotoPage(path) {
@@ -36,8 +44,9 @@ export default {
         window.pageYOffset ||
         document.documentElement.scrollTop ||
         document.body.scrollTop;
+        
       var offsetTop = document.querySelector("#topBar").offsetTop;
-      console.log(scrollTop, offsetTop)
+      // console.log(scrollTop, offsetTop)
       if (scrollTop > offsetTop) {
         this.topBarFixed = true;
       } else {
@@ -51,7 +60,7 @@ export default {
 .main-page {
   min-height: 60vh;
 }
-.topBarIsFixed{
+.topBarIsFixed {
   position: fixed;
   top: 0;
   left: 0;

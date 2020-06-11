@@ -1,12 +1,15 @@
 <template>
   <div id="app">
     <router-view />
+    <goToTop />
   </div>
 </template>
 
 <script>
+import goToTop from "@/components/public/goToTop";
 export default {
-  name: 'App'
+  name: 'App',
+  components:{goToTop}
 }
 </script>
 

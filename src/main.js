@@ -11,6 +11,7 @@ import ElementUI from 'element-ui'
 import messageBox from './components/MessageBox/messageBox.js'
 import 'element-ui/lib/theme-chalk/index.css'
 import store from "./store"
+import titleBar from "$components/public/titleBar";
 
 // 使用element-ui 开发本项目
 Vue.use(ElementUI)
@@ -22,6 +23,10 @@ Vue.prototype.$api = api
 
 // 弹窗复用性极高 挂在原型上
 Vue.prototype.$messageBox = messageBox
+
+// 标题栏组件复用性极高 注册为全局组件
+Vue.component('titleBar', titleBar)
+
 
 // 注册一些全局使用的filter
 Object.keys(filters).forEach(key => {

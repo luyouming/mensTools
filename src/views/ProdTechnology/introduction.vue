@@ -1,5 +1,7 @@
 <template>
-  <div class="ProdIntro-container DefaultContainerStyle">产品简介</div>
+  <div class="ProdIntro-container DefaultContainerStyle">
+    <titleBar text="产品简介"/>
+  </div>
 </template>
 
 <script>

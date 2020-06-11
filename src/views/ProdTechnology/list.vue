@@ -1,5 +1,7 @@
 <template>
-  <div class="ProdList-container DefaultContainerStyle">产品列表</div>
+  <div class="ProdList-container DefaultContainerStyle">
+    <titleBar text="产品列表"/>
+  </div>
 </template>
 
 <script>
