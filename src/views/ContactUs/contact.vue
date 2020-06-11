@@ -4,7 +4,7 @@
     <div class="ContactUs-main">
       <div class="main-left" />
       <div class="submit-main">
-      <div class="main-title">需求OR建议OR留言</div>
+      <div class="main-title">留言</div>
       <div class="main-desc">欢迎来到苏州美图半导体有限公司官方网站。 关于产品的使用问题、改进建议，或举报不良信息，您都可以填写下方信息告诉我们，我们重视您的每一个想法</div>
         <input v-model="data.name" type="text" maxlength="10" placeholder="姓名*" />
         <input v-model="data.email" type="text" maxlength="20" placeholder="邮箱*" />
