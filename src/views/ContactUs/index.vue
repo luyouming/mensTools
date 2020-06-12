@@ -4,7 +4,7 @@
     <top-bar
       id="topBar"
       :class="topBarFixed ? 'topBarIsFixed' : '' "
-      :chosenTabIndex="5"
+      :chosenTabIndex="4"
       @changePage="gotoPage"
     />
     <router-view class="main-page" />
