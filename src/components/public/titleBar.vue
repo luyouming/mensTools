@@ -22,17 +22,17 @@ export default {
     width: 100%;
     user-select: none;
     cursor: default;
-    height: 290PX;
+    height: 4rem;
     background: url('~@/assets/ContactUs/as02.jpg') 50% 50%;
     >div{
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 290PX;
+      height: 4rem;
       background-color: rgba(0,0,0,0.5);
     }
     span{
-      font-size: 0.8rem;
+      font-size: 0.7rem;
       color: white;
       font-weight: 800;
       padding: 10PX;

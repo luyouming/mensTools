@@ -1,19 +1,20 @@
 <template>
   <div class="ContactUs-container">
     <title-bar v-if="showTitle" text="联系我们" />
-    <div class="ContactUs-main">
-      <div class="main-left" />
-      <div class="submit-main">
-      <div class="main-title">留言</div>
-      <div class="main-desc">欢迎来到苏州美图半导体有限公司官方网站。 关于产品的使用问题、改进建议，或举报不良信息，您都可以填写下方信息告诉我们，我们重视您的每一个想法</div>
+    <el-row class="ContactUs-main">
+      <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
+        <div class="main-left" />
+      </el-col>
+      <el-col class="submit-main" :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
+        <div class="main-title">留言</div>
+        <div class="main-desc">欢迎来到苏州美图半导体有限公司官方网站。 关于产品的使用问题、改进建议，或举报不良信息，您都可以填写下方信息告诉我们，我们重视您的每一个想法</div>
         <input v-model="data.name" type="text" maxlength="10" placeholder="姓名*" />
         <input v-model="data.email" type="text" maxlength="20" placeholder="邮箱*" />
         <input v-model="data.phone" type="text" maxlength="11" placeholder="手机*" />
         <textarea v-model="data.desc" type="text"  placeholder="需要 / 改进 / 建议" />
         <button @click="submitInfo">提交</button>
-      </div>
-    </div>
-
+      </el-col>
+    </el-row>
   </div>
 </template>
 
@@ -58,46 +59,46 @@ export default {
 <style scoped lang="scss">
 .ContactUs-container{
   .ContactUs-main{
-    display: flex;
-    .main-title{
-      text-align: left;
-      user-select: none;
-      font-size: 0.7rem;
-      font-weight: 600;;
-      cursor: default;
-      color:white;
-    }
     .main-left{
-      width: 50%;
+      height: 11rem;
+      width: 100%;
       background: url('~@/assets/ContactUs/bg88.jpg') no-repeat;
       background-size: cover;
     }
-    .main-desc{
-      user-select: none;
-      cursor: default;
-      color: white;
-      padding: 20PX 0;
-      text-align: left;
-      line-height: 0.5rem;
-      font-size: 0.32rem;
-    }
     .submit-main{
-      padding: 80PX 30PX 100PX 30PX !important;
+      height: 11rem;
+      padding: 0.8rem 0.5rem;
       background: url('~@/assets/ContactUs/worldmap.png') no-repeat;
       background-size: cover;
       background-position: center;
       background-color: #002E5A !important;
       box-sizing: border-box;
       display: inline-flex;
-      width: 50%;
       flex-direction: column;
+      .main-title{
+        text-align: left;
+        user-select: none;
+        font-size: 0.5rem;
+        font-weight: 600;;
+        cursor: default;
+        color:white;
+      }
+      .main-desc{
+        user-select: none;
+        cursor: default;
+        color: white;
+        padding: 0.2rem 0;
+        text-align: left;
+        line-height: 0.4rem;
+        font-size: 0.3rem;
+      }
       input, textarea{
         color: white;
         background-color: rgba(255,255,255, 0);
         box-sizing: border-box;
         width: 100%;
-        padding: 10PX;
-        line-height: 20PX;
+        padding: 0.1rem;
+        line-height: 0.5rem;
         font-size: 0.3rem;
         outline: none;
         border: none;
@@ -109,7 +110,7 @@ export default {
         }
       }
       textarea{
-        height: 3rem;
+        height: 2.5rem;
         resize: none;
         &::-webkit-input-placeholder{
           color: #ccc;
