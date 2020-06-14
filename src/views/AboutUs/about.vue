@@ -49,7 +49,7 @@ export default {
  }
  .friendLink{
    width: 100%;
-   height: 400px;
+   height: 500px;
    background:#0B2F57;
    display: flex;
    justify-content: center;
@@ -62,6 +62,8 @@ export default {
    }
    img{
      cursor: pointer;
+     height: 260px;
+     width: 350px;
    }
  }
 }
