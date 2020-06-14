@@ -195,11 +195,11 @@ export default {
     0%{transform: translateX(-400px);opacity: 0;}
     100%{transform:translateX(0px);opacity: 1; }
 }
- @keyframes topEaseInAnimate{/*定义从右边滑入文字的动画*/
+ @keyframes topEaseInAnimate{/*定义从上边滑入文字的动画*/
     0%{transform: translateY(200px);opacity: 0;}
     100%{transform:translateY(0px);opacity: 1; }
 }
- @keyframes bottomEaseInAnimate{/*定义从右边滑入文字的动画*/
+ @keyframes bottomEaseInAnimate{/*定义从下边滑入文字的动画*/
     0%{transform: translateY(-200px);opacity: 0;}
     100%{transform:translateY(0px);opacity: 1; }
 }
