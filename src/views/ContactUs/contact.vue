@@ -58,84 +58,175 @@ export default {
 
 <style scoped lang="scss">
 .ContactUs-container{
-  .ContactUs-main{
-    .main-left{
-      height: 11rem;
+  // .ContactUs-main{
+  //   padding: 0 130px;
+  //   box-sizing:border-box;
+  //   width: 100%;
+  //   margin: 120px 0;
+  //   .main-left{
+  //     height: 11rem;
+  //     width: 100%;
+  //     background: url('~@/assets/ContactUs/bg88.jpg') no-repeat;
+  //     background-size: cover;
+  //   }
+  //   .submit-main{
+  //     height: 11rem;
+  //     padding: 0.8rem 0.5rem;
+  //     background: url('~@/assets/ContactUs/worldmap.png') no-repeat;
+  //     background-size: cover;
+  //     background-position: center;
+  //     background-color: #002E5A !important;
+  //     box-sizing: border-box;
+  //     display: inline-flex;
+  //     flex-direction: column;
+  //     .main-title{
+  //       text-align: left;
+  //       user-select: none;
+  //       font-size: 0.5rem;
+  //       font-weight: 600;;
+  //       cursor: default;
+  //       color:white;
+  //     }
+  //     .main-desc{
+  //       user-select: none;
+  //       cursor: default;
+  //       color: white;
+  //       padding: 0.2rem 0;
+  //       text-align: left;
+  //       line-height: 0.4rem;
+  //       font-size: 0.3rem;
+  //     }
+  //     input, textarea{
+  //       color: white;
+  //       background-color: rgba(255,255,255, 0);
+  //       box-sizing: border-box;
+  //       width: 100%;
+  //       padding: 0.1rem;
+  //       line-height: 0.5rem;
+  //       font-size: 0.3rem;
+  //       outline: none;
+  //       border: none;
+  //       transition: all 0.5s;
+  //       border-bottom: 1PX solid #ddd;
+  //       margin-bottom: 20PX;
+  //       &:focus{
+  //         border-bottom: 1PX solid #00c3ed;
+  //       }
+  //     }
+  //     textarea{
+  //       height: 2.5rem;
+  //       resize: none;
+  //       &::-webkit-input-placeholder{
+  //         color: #ccc;
+  //       }
+  //     }
+  //     button{
+  //       border: none;
+  //       user-select: none;
+  //       outline: none;
+  //       border-radius: 1rem;
+  //       width: 3rem;
+  //       height: 1rem;
+  //       background-color: #0099ba;
+  //       color: white;
+  //       font-size: 0.35rem;
+  //       letter-spacing: 0.2rem;
+  //       border: 3PX solid #0099ba;
+  //       transition: all 0.3s;
+  //       cursor: pointer;
+  //       &:hover{
+  //         background-color: transparent;
+  //         color: #00c3ed;
+  //       }
+  //     }
+  //   }
+  // }
+  .ContactUs-main {
       width: 100%;
-      background: url('~@/assets/ContactUs/bg88.jpg') no-repeat;
-      background-size: cover;
-    }
-    .submit-main{
-      height: 11rem;
-      padding: 0.8rem 0.5rem;
-      background: url('~@/assets/ContactUs/worldmap.png') no-repeat;
-      background-size: cover;
-      background-position: center;
-      background-color: #002E5A !important;
-      box-sizing: border-box;
-      display: inline-flex;
-      flex-direction: column;
-      .main-title{
+      display: flex;
+      padding: 0 130px;
+    box-sizing:border-box;
+    margin: 120px 0;
+      .main-title {
         text-align: left;
         user-select: none;
         font-size: 0.5rem;
-        font-weight: 600;;
-        cursor: default;
-        color:white;
-      }
-      .main-desc{
-        user-select: none;
+        font-weight: 600;
         cursor: default;
         color: white;
-        padding: 0.2rem 0;
-        text-align: left;
-        line-height: 0.4rem;
-        font-size: 0.3rem;
       }
-      input, textarea{
-        color: white;
-        background-color: rgba(255,255,255, 0);
-        box-sizing: border-box;
+
+      .main-left {
         width: 100%;
-        padding: 0.1rem;
-        line-height: 0.5rem;
-        font-size: 0.3rem;
-        outline: none;
-        border: none;
-        transition: all 0.5s;
-        border-bottom: 1PX solid #ddd;
-        margin-bottom: 20PX;
-        &:focus{
-          border-bottom: 1PX solid #00c3ed;
-        }
+        height: 100%;
+        background: url("~@/assets/CommonImg/ContactUs/bg88.jpg") no-repeat;
+        background-size: cover;
       }
-      textarea{
-        height: 2.5rem;
-        resize: none;
-        &::-webkit-input-placeholder{
-          color: #ccc;
-        }
-      }
-      button{
-        border: none;
+      .main-desc {
         user-select: none;
-        outline: none;
-        border-radius: 1rem;
-        width: 3rem;
-        height: 1rem;
-        background-color: #0099ba;
+        cursor: default;
         color: white;
-        font-size: 0.35rem;
-        letter-spacing: 0.2rem;
-        border: 3PX solid #0099ba;
-        transition: all 0.3s;
-        cursor: pointer;
-        &:hover{
-          background-color: transparent;
-          color: #00c3ed;
+        padding: 20px 0;
+        text-align: left;
+        line-height: 0.3rem;
+        font-size: 0.2rem;
+      }
+      .submit-main {
+        padding: 80px 30px 80px 30px !important;
+        background: url("~@/assets/CommonImg/ContactUs/worldmap.png") no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-color: #002e5a !important;
+        box-sizing: border-box;
+        display: inline-flex;
+        width: 50%;
+        flex-direction: column;
+        input,
+        textarea {
+          color: white;
+          background-color: rgba(255, 255, 255, 0);
+          box-sizing: border-box;
+          width: 100%;
+          padding: 10px;
+          line-height: 20px;
+          font-size: 0.2rem;
+          outline: none;
+          border: none;
+          transition: all 0.5s;
+          border-bottom: 1px solid #ddd;
+          margin-bottom: 20px;
+          &:focus {
+            border-bottom: 1px solid #00c3ed;
+          }
+        }
+        textarea {
+          height: 1.5rem;
+          resize: none;
+          &::-webkit-input-placeholder {
+            color: #ccc;
+          }
+        }
+        button {
+          border: none;
+          user-select: none;
+          outline: none;
+          border-radius: 1rem;
+          width: 2rem;
+          height: 0.5rem;
+          background-color: #0099ba;
+          color: white;
+          font-size: 0.3rem;
+          letter-spacing: 0.2rem;
+          border: 3px solid #0099ba;
+          transition: all 0.3s;
+          cursor: pointer;
+          margin-top: 30px;
+          &:hover {
+            background-color: transparent;
+            color: #00c3ed;
+          }
         }
       }
     }
-  }
 }
 </style>

@@ -1,6 +1,8 @@
 <template>
   <div class="Homepage-container DefaultContainerStyle">
+    <!-- 轮播大图 -->
     <swiperImg :imglist="imgArr"></swiperImg>
+    <!-- 产品列表展示 -->
     <div class="content">
       <div class="productBox">
         <el-row :gutter="30">
@@ -16,6 +18,12 @@
             <productDiscribe :productInfo="item" :isEven="(index + 1) % 2 == 0"></productDiscribe>
           </el-col>
         </el-row>
+      </div>
+    </div>
+    <!-- 产品海报图 -->
+    <div class="content">
+      <div class="provideGoodPro">
+      <img :src="require(`$assets/CommonImg/HomePage/provideGoodPro.jpg`)" alt="">
       </div>
     </div>
     <!-- 数字动效 -->
@@ -57,7 +65,7 @@
         <el-row :gutter="30">
           <el-col
             v-for="(item, index) in mainProductList"
-            :xs="24"
+            :xs="12"
             :sm="12"
             :md="6"
             :lg="6"
@@ -101,6 +109,7 @@ import config from "@/config/index";
 import swiperImg from "@/components/public/swiperImg";
 import productDiscribe from "@/components/public/productDiscribe";
 import IcountUp from "vue-countup-v2";
+import commonInfo from '@/assets/CommonJs/commonInfo'
 export default {
   name: "Home",
   data() {
@@ -136,32 +145,7 @@ export default {
         { title: "桌面显影机", subTitle: "产品介绍产品介绍产品介绍产品介绍产品介绍产品介绍", iconUrl: `home-main-pro-3.jpg` },
         { title: "可编程热板PHP-8", subTitle: "产品介绍产品介绍产品介绍产品介绍产品介绍产品介绍", iconUrl: `home-main-pro-4.jpg` }
       ],
-      productList: [
-        {
-          name: "生物芯片专用设备",
-          iconUrl: `product1.png`,
-          discription:
-            "产品描述产产品描述产产品描述产品描述产品描述产品描述产品描述产品描述"
-        },
-        {
-          name: "CIS三维封装",
-          iconUrl: `product2.png`,
-          discription:
-            "产品描述产产品描述产产品描述产品描述产品描述产品描述产品描述产品描述"
-        },
-        {
-          name: "MENS器件制造",
-          iconUrl: `product3.png`,
-          discription:
-            "产品描述产产品描述产产品描述产品描述产品描述产品描述产品描述产品描述"
-        },
-        {
-          name: "薄片传输",
-          iconUrl: `product4.png`,
-          discription:
-            "产品描述产产品描述产产品描述产品描述产品描述产品描述产品描述产品描述"
-        }
-      ]
+      productList: commonInfo.productList
     };
   },
   mounted() {
@@ -192,7 +176,7 @@ export default {
 
       var offsetTop = document.querySelector("#numberDance").offsetTop;
       // console.log(scrollTop, offsetTop)
-      if (scrollTop > 350) {
+      if (scrollTop > 745) {
         this.numberDanceStart = true;
       }
     },
@@ -219,6 +203,15 @@ export default {
       padding: 0 130px;
       box-sizing: border-box;
       margin: 120px 0 40px 0;
+    }
+    .provideGoodPro{
+      box-sizing: border-box;
+      padding: 0 130px;
+      margin: 0px 0 120px 0;
+      img{
+        width: 100%;
+        height: 100%;
+      }
     }
     .numberDanceBox {
       display: flex;
@@ -362,10 +355,13 @@ export default {
     .ContactUs-main {
       width: 100%;
       display: flex;
+      padding: 0 130px;
+    box-sizing:border-box;
+    margin-bottom: 120px;
       .main-title {
         text-align: left;
         user-select: none;
-        font-size: 0.7rem;
+        font-size: 0.5rem;
         font-weight: 600;
         cursor: default;
         color: white;
@@ -373,7 +369,7 @@ export default {
 
       .main-left {
         width: 50%;
-        background: url("~@/assets/ContactUs/bg88.jpg") no-repeat;
+        background: url("~@/assets/CommonImg/ContactUs/bg88.jpg") no-repeat;
         background-size: cover;
       }
       .main-desc {
@@ -382,12 +378,12 @@ export default {
         color: white;
         padding: 20px 0;
         text-align: left;
-        line-height: 0.5rem;
-        font-size: 0.32rem;
+        line-height: 0.3rem;
+        font-size: 0.2rem;
       }
       .submit-main {
-        padding: 80px 30px 100px 30px !important;
-        background: url("~@/assets/ContactUs/worldmap.png") no-repeat;
+        padding: 80px 30px 80px 30px !important;
+        background: url("~@/assets/CommonImg/ContactUs/worldmap.png") no-repeat;
         background-size: cover;
         background-position: center;
         background-color: #002e5a !important;
@@ -403,18 +399,18 @@ export default {
           width: 100%;
           padding: 10px;
           line-height: 20px;
-          font-size: 0.3rem;
+          font-size: 0.2rem;
           outline: none;
           border: none;
           transition: all 0.5s;
           border-bottom: 1px solid #ddd;
-          margin-bottom: 20px;
+            margin-bottom: 20px;
           &:focus {
             border-bottom: 1px solid #00c3ed;
           }
         }
         textarea {
-          height: 3rem;
+          height: 1.5rem;
           resize: none;
           &::-webkit-input-placeholder {
             color: #ccc;
@@ -425,14 +421,15 @@ export default {
           user-select: none;
           outline: none;
           border-radius: 1rem;
-          width: 3rem;
-          height: 1rem;
+          width: 2rem;
+          height: 0.6rem;
           background-color: #0099ba;
           color: white;
-          font-size: 0.35rem;
+          font-size: 0.3rem;
           letter-spacing: 0.2rem;
           border: 3px solid #0099ba;
           transition: all 0.3s;
+          margin-top: 30px;
           cursor: pointer;
           &:hover {
             background-color: transparent;
