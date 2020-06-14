@@ -23,7 +23,7 @@ export default {
     user-select: none;
     cursor: default;
     height: 2.3rem;
-    background: url('~@/assets/ContactUs/as02.jpg') 50% 50%;
+    background: url('~@/assets/CommonImg/ContactUs/as02.jpg') 50% 50%;
     >div{
       display: flex;
       justify-content: center;

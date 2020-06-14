@@ -168,11 +168,11 @@ export default {
         color: white;
         padding: 20px 0;
         text-align: left;
-        line-height: 0.5rem;
+        line-height: 0.3rem;
         font-size: 0.2rem;
       }
       .submit-main {
-        padding: 80px 30px 100px 30px !important;
+        padding: 80px 30px 80px 30px !important;
         background: url("~@/assets/CommonImg/ContactUs/worldmap.png") no-repeat;
         background-size: cover;
         background-position: center;
@@ -200,7 +200,7 @@ export default {
           }
         }
         textarea {
-          height: 2rem;
+          height: 1.5rem;
           resize: none;
           &::-webkit-input-placeholder {
             color: #ccc;
@@ -212,7 +212,7 @@ export default {
           outline: none;
           border-radius: 1rem;
           width: 2rem;
-          height: 0.6rem;
+          height: 0.5rem;
           background-color: #0099ba;
           color: white;
           font-size: 0.3rem;
@@ -220,6 +220,7 @@ export default {
           border: 3px solid #0099ba;
           transition: all 0.3s;
           cursor: pointer;
+          margin-top: 30px;
           &:hover {
             background-color: transparent;
             color: #00c3ed;
