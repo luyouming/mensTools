@@ -50,8 +50,7 @@ export default {
   },
   methods: {
     viewDetail(info) {
-      this.$store.commit('SET_PROD_INFO', info)
-      this.$router.push('/prod/introduction')
+      this.$router.push('/prod/introduction/'+info.id)
       setTimeout(() => {
         document.documentElement.scrollTop = 0
       }, 100)

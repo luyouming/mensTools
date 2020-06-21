@@ -58,95 +58,13 @@ export default {
 
 <style scoped lang="scss">
 .ContactUs-container{
-  // .ContactUs-main{
-  //   padding: 0 130px;
-  //   box-sizing:border-box;
-  //   width: 100%;
-  //   margin: 120px 0;
-  //   .main-left{
-  //     height: 11rem;
-  //     width: 100%;
-  //     background: url('~@/assets/ContactUs/bg88.jpg') no-repeat;
-  //     background-size: cover;
-  //   }
-  //   .submit-main{
-  //     height: 11rem;
-  //     padding: 0.8rem 0.5rem;
-  //     background: url('~@/assets/ContactUs/worldmap.png') no-repeat;
-  //     background-size: cover;
-  //     background-position: center;
-  //     background-color: #002E5A !important;
-  //     box-sizing: border-box;
-  //     display: inline-flex;
-  //     flex-direction: column;
-  //     .main-title{
-  //       text-align: left;
-  //       user-select: none;
-  //       font-size: 0.5rem;
-  //       font-weight: 600;;
-  //       cursor: default;
-  //       color:white;
-  //     }
-  //     .main-desc{
-  //       user-select: none;
-  //       cursor: default;
-  //       color: white;
-  //       padding: 0.2rem 0;
-  //       text-align: left;
-  //       line-height: 0.4rem;
-  //       font-size: 0.3rem;
-  //     }
-  //     input, textarea{
-  //       color: white;
-  //       background-color: rgba(255,255,255, 0);
-  //       box-sizing: border-box;
-  //       width: 100%;
-  //       padding: 0.1rem;
-  //       line-height: 0.5rem;
-  //       font-size: 0.3rem;
-  //       outline: none;
-  //       border: none;
-  //       transition: all 0.5s;
-  //       border-bottom: 1PX solid #ddd;
-  //       margin-bottom: 20PX;
-  //       &:focus{
-  //         border-bottom: 1PX solid #00c3ed;
-  //       }
-  //     }
-  //     textarea{
-  //       height: 2.5rem;
-  //       resize: none;
-  //       &::-webkit-input-placeholder{
-  //         color: #ccc;
-  //       }
-  //     }
-  //     button{
-  //       border: none;
-  //       user-select: none;
-  //       outline: none;
-  //       border-radius: 1rem;
-  //       width: 3rem;
-  //       height: 1rem;
-  //       background-color: #0099ba;
-  //       color: white;
-  //       font-size: 0.35rem;
-  //       letter-spacing: 0.2rem;
-  //       border: 3PX solid #0099ba;
-  //       transition: all 0.3s;
-  //       cursor: pointer;
-  //       &:hover{
-  //         background-color: transparent;
-  //         color: #00c3ed;
-  //       }
-  //     }
-  //   }
-  // }
+  min-height: 10vh;
   .ContactUs-main {
       width: 100%;
       display: flex;
       padding: 0 130px;
-    box-sizing:border-box;
-    margin: 120px 0;
+      box-sizing:border-box;
+      margin: 120px 0;
       .main-title {
         text-align: left;
         user-select: none;

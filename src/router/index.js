@@ -55,7 +55,7 @@ export default new Router({
           name: 'prodList',
           component: () => import('@/views/ProdTechnology/list.vue'),
         },{
-          path: '/prod/introduction',
+          path: '/prod/introduction/:id',
           name: 'prodIntroduction',
           component: () => import('@/views/ProdTechnology/introduction.vue'),
         }
