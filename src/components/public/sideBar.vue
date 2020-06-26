@@ -9,7 +9,13 @@
     <div class="qq">
       <div class="Box">
         <img :src="require(`$assets/CommonImg/sideBar/qq.png`)" class="qqImg" alt />
-        <span class="number">13584888970</span>
+        <span class="number">443630395</span>
+      </div>
+    </div>
+     <div class="friend">
+      <div class="topBox">
+        <img :src="require(`$assets/CommonImg/AboutUs/friendLink.png`)" @click="gotoFriendNet" class="friendImg" alt />
+        <!-- <span class="number">13584888970</span> -->
       </div>
     </div>
     <div class="goToTop">
@@ -35,7 +41,10 @@ export default {
   methods: {
     gotoTop() {
         window.scrollTo(0, 0)
-      }
+      },
+      gotoFriendNet() {
+      window.location.href = 'http://www.baidu.com'
+    }
   }
 };
 </script>
@@ -49,7 +58,7 @@ export default {
   min-width: 60px;
   position: fixed;
   z-index: 999;
-  top: calc(50% - 90px);
+  top: calc(50% - 120px);
   right: 10px;
   div {
     width: 100%;
@@ -66,6 +75,11 @@ export default {
     .qqImg {
       width: 50px;
       height: 50px;
+    }
+    .friendImg{
+      height: 55px;
+      width: 60px;
+      margin-bottom: 10px;
     }
     .Box, .topBox {
       position: absolute;
@@ -85,6 +99,9 @@ export default {
         margin-left: 10px;
         display: none;
       }
+    }
+    .topBox:hover{
+     cursor: pointer;
     }
     .Box:hover{
       width: 230px;

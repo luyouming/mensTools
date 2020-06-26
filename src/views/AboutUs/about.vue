@@ -8,9 +8,9 @@
       </div>
     </div>
     <!-- 友情链接 -->
-    <div class="friendLink">
+    <div class="friendLink" v-if="false">
       <span>友情链接:</span>
-      <img @click="gotoFriendNet" :src="require(`$assets/CommonImg/AboutUs/friend-logo.png`)" alt="">
+      <img @click="gotoFriendNet" :src="require(`$assets/CommonImg/AboutUs/friendLink.png`)" alt="">
     </div>
   </div>
 </template>
