@@ -193,7 +193,7 @@ export default {
 
       var offsetTop = document.querySelector("#numberDance").offsetTop;
       // console.log(scrollTop, offsetTop)
-      if (scrollTop > 745) {
+      if (scrollTop > 880) {
         this.numberDanceStart = true;
       }
     },
@@ -304,7 +304,7 @@ export default {
       width: 100%;
       padding: 0 130px;
       box-sizing: border-box;
-      margin: 80px 0 40px 0;
+      margin: 0px 0 40px 0;
       .mainProduct {
         display: flex;
         flex-direction: column;

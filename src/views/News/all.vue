@@ -24,7 +24,7 @@
                 {{ item.desc }}
               </div>
               <div class="news-item-details">
-                View Details <i class="el-icon-right" />
+                展示详情 <i class="el-icon-right" />
               </div>
             </div>
           </el-col>

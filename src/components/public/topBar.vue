@@ -74,8 +74,8 @@ export default {
         //   { name: '企业荣誉', path: '/aboutus/honor'},
         // ] },
         { name: '应用领域', path: '/apparea', isSubShow:false, child: [
-          { name: '所有', path: '/apparea/all'},
-          { name: '简介', path: '/apparea/introduction'}
+          // { name: '所有', path: '/apparea/all'},
+          // { name: '简介', path: '/apparea/introduction'}
         ]},
         // { name: '产品技术', path: '/prod', isSubShow:false},
         { name: '产品列表', path: '/prod/list', isSubShow:false, child: [

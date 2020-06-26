@@ -1,6 +1,6 @@
 <template>
   <div class="Apparea-all-container DefaultContainerStyle">
-    <title-bar text="所有" />
+    <title-bar text="应用领域" />
     <!-- 产品列表展示 -->
     <div class="content">
       <div class="productBox">

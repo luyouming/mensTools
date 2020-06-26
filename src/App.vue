@@ -1,15 +1,16 @@
 <template>
   <div id="app">
     <router-view />
-    <goToTop />
+    <sideBar />
   </div>
 </template>
 
 <script>
-import goToTop from "@/components/public/goToTop";
+// import goToTop from "@/components/public/goToTop";
+import sideBar from "@/components/public/sideBar";
 export default {
   name: 'App',
-  components:{goToTop}
+  components:{sideBar}
 }
 </script>
 

@@ -4,7 +4,7 @@
     <h5 class="name">{{productInfo.name}}</h5>
     <div class="discribe">{{productInfo.discription}}</div>
     <div class="news-item-details" :class="isEven ? 'news-item-details-even' : 'news-item-details'">
-      Show View
+      展示详情
       <i class="el-icon-right" />
     </div>
   </div>
