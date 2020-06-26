@@ -21,32 +21,14 @@
       </div>
     </div>
     <!-- 产品海报图 -->
-    <div class="content">
+    <div class="content" v-show="false">
       <div class="provideGoodPro">
-      <img :src="require(`$assets/CommonImg/HomePage/provideGoodPro.jpg`)" alt="">
-      </div>
-    </div>
-    <!-- 数字动效 -->
-    <div class="content">
-      <div class="numberDanceBox" id="numberDance">
-        <div class="numberDance" v-for="(item, index) in numberDanceList" :key="index + item">
-          <img class="imgPic" :src="require(`$static/icon/${item.iconUrl}`)" alt />
-          <p class="number" v-if="!numberDanceStart">0</p>
-          <IcountUp
-            class="number"
-            v-if="numberDanceStart"
-            :endVal="item.num"
-            :options="options"
-            @ready="onReady"
-          ></IcountUp>
-
-          <p class="name">{{item.name}}</p>
-        </div>
+        <img :src="require(`$assets/CommonImg/HomePage/provideGoodPro.jpg`)" alt />
       </div>
     </div>
     <!-- 公司主营产品 -->
     <div class="content">
-      <div class="mainProductTitle">
+      <div class="mainProductTitle" v-show="false">
         <p class="name">
           公司
           <span class="keyWord">主营</span>
@@ -84,6 +66,25 @@
         </el-row>
       </div>
     </div>
+    <!-- 数字动效 -->
+    <div class="content">
+      <div class="numberDanceBox" id="numberDance">
+        <div class="numberDance" v-for="(item, index) in numberDanceList" :key="index + item">
+          <img class="imgPic" :src="require(`$static/icon/${item.iconUrl}`)" alt />
+          <p class="number" v-if="!numberDanceStart">0</p>
+          <IcountUp
+            class="number"
+            v-if="numberDanceStart"
+            :endVal="item.num"
+            :options="options"
+            @ready="onReady"
+          ></IcountUp>
+
+          <p class="name">{{item.name}}</p>
+        </div>
+      </div>
+    </div>
+
     <!-- 联系我们 -->
     <div class="content">
       <div class="ContactUs-main">
@@ -109,7 +110,7 @@ import config from "@/config/index";
 import swiperImg from "@/components/public/swiperImg";
 import productDiscribe from "@/components/public/productDiscribe";
 import IcountUp from "vue-countup-v2";
-import commonInfo from '@/assets/CommonJs/commonInfo'
+import commonInfo from "@/assets/CommonJs/commonInfo";
 export default {
   name: "Home",
   data() {
@@ -140,10 +141,26 @@ export default {
         { name: "获奖", iconUrl: `medal.png`, num: 25 }
       ],
       mainProductList: [
-        { title: "晶圆喷胶机SC-50", subTitle: "产品介绍产品介绍产品介绍产品介绍产品介绍产品介绍", iconUrl: `home-main-pro-1.jpg` },
-        { title: "键合机TWB-150A", subTitle: "产品介绍产品介绍产品介绍产品介绍产品介绍产品介绍", iconUrl: `home-main-pro-2.jpg` },
-        { title: "桌面显影机", subTitle: "产品介绍产品介绍产品介绍产品介绍产品介绍产品介绍", iconUrl: `home-main-pro-3.jpg` },
-        { title: "可编程热板PHP-8", subTitle: "产品介绍产品介绍产品介绍产品介绍产品介绍产品介绍", iconUrl: `home-main-pro-4.jpg` }
+        {
+          title: "晶圆喷胶机SC-50",
+          subTitle: "产品介绍产品介绍产品介绍产品介绍产品介绍产品介绍",
+          iconUrl: `home-main-pro-1.jpg`
+        },
+        {
+          title: "键合机TWB-150A",
+          subTitle: "产品介绍产品介绍产品介绍产品介绍产品介绍产品介绍",
+          iconUrl: `home-main-pro-2.jpg`
+        },
+        {
+          title: "桌面显影机",
+          subTitle: "产品介绍产品介绍产品介绍产品介绍产品介绍产品介绍",
+          iconUrl: `home-main-pro-3.jpg`
+        },
+        {
+          title: "可编程热板PHP-8",
+          subTitle: "产品介绍产品介绍产品介绍产品介绍产品介绍产品介绍",
+          iconUrl: `home-main-pro-4.jpg`
+        }
       ],
       productList: commonInfo.productList
     };
@@ -204,11 +221,11 @@ export default {
       box-sizing: border-box;
       margin: 120px 0 40px 0;
     }
-    .provideGoodPro{
+    .provideGoodPro {
       box-sizing: border-box;
       padding: 0 130px;
       margin: 0px 0 120px 0;
-      img{
+      img {
         width: 100%;
         height: 100%;
       }
@@ -300,14 +317,14 @@ export default {
         margin-bottom: 80px;
         position: relative;
         height: 500px;
-        .imgPic{
+        .imgPic {
           width: 100%;
           height: 100%;
         }
-        .name{
+        .name {
           position: absolute;
           bottom: 0;
-          left:0;
+          left: 0;
           width: 100%;
           height: 120px;
           line-height: 120px;
@@ -315,40 +332,40 @@ export default {
           font-weight: bold;
           font-family: "黑体";
           background: rgba(0, 46, 90, 0.9);
-          color:#00c3ed;
+          color: #00c3ed;
         }
-        .introduce{
+        .introduce {
           position: absolute;
           top: 0px;
-          left:0;
+          left: 0;
           width: 100%;
           height: 100%;
-        border-radius: 8px;
+          border-radius: 8px;
           background: rgba(0, 46, 90, 0.9);
           padding: 180px 30px 0 30px;
           box-sizing: border-box;
-          animation: topEaseInAnimate;/*动画名称*/  
-    animation-duration: 0.3s;/*动画持续时间*/  
-    -webkit-animation:topEaseInAnimate 0.3s;/*针对webkit内核*/  
+          animation: topEaseInAnimate; /*动画名称*/
+          animation-duration: 0.3s; /*动画持续时间*/
+          -webkit-animation: topEaseInAnimate 0.3s; /*针对webkit内核*/
           display: none;
-          .introduce_name{
+          .introduce_name {
             font-size: 38px;
-          font-weight: bold;
-          font-family: "黑体";
-          color:#00c3ed;
+            font-weight: bold;
+            font-family: "黑体";
+            color: #00c3ed;
           }
-          .details{
-             font-size: 25px;
-        color: #efefef;
-        font-weight: 200;
-        line-height: 45px;
+          .details {
+            font-size: 25px;
+            color: #efefef;
+            font-weight: 200;
+            line-height: 45px;
           }
         }
       }
-      .mainProduct:hover .name{
+      .mainProduct:hover .name {
         display: none;
       }
-      .mainProduct:hover .introduce{
+      .mainProduct:hover .introduce {
         display: block;
       }
     }
@@ -356,8 +373,8 @@ export default {
       width: 100%;
       display: flex;
       padding: 0 130px;
-    box-sizing:border-box;
-    margin-bottom: 120px;
+      box-sizing: border-box;
+      margin-bottom: 120px;
       .main-title {
         text-align: left;
         user-select: none;
@@ -404,7 +421,7 @@ export default {
           border: none;
           transition: all 0.5s;
           border-bottom: 1px solid #ddd;
-            margin-bottom: 20px;
+          margin-bottom: 20px;
           &:focus {
             border-bottom: 1px solid #00c3ed;
           }
@@ -440,8 +457,15 @@ export default {
     }
   }
 }
- @keyframes topEaseInAnimate{/*定义从上边滑入文字的动画*/
-    0%{transform: translateY(200px);opacity: 0;}
-    100%{transform:translateY(0px);opacity: 1; }
+@keyframes topEaseInAnimate {
+  /*定义从上边滑入文字的动画*/
+  0% {
+    transform: translateY(200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
 }
 </style>
