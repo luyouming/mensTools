@@ -219,7 +219,7 @@ export default {
       width: 100%;
       padding: 0 130px;
       box-sizing: border-box;
-      margin: 120px 0 40px 0;
+      margin: 40px 0 0px 0;
     }
     .provideGoodPro {
       box-sizing: border-box;
