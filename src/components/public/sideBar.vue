@@ -9,7 +9,7 @@
     <div class="qq">
       <div class="Box">
         <img :src="require(`$assets/CommonImg/sideBar/qq.png`)" class="qqImg" alt />
-        <span class="number">443630395</span>
+        <span class="number">2178862890</span>
       </div>
     </div>
      <div class="friend">
@@ -43,7 +43,7 @@ export default {
         window.scrollTo(0, 0)
       },
       gotoFriendNet() {
-      window.location.href = 'http://www.baidu.com'
+      window.location.href = 'http://www.rdmicro.com'
     }
   }
 };
