@@ -11,8 +11,8 @@
               <div class="item-title">
                 {{ item.title }}
               </div>
-              <div class="item-desc">
-                <span @click="viewDetail(item)" class="title">{{ item.title }}</span>
+              <div class="item-desc" @click="viewDetail(item)">
+                <span class="title">{{ item.title }}</span>
                 <span class="desc">{{ item.desc }}</span>
               </div>
             </div>
@@ -100,8 +100,8 @@ export default {
       box-sizing: border-box;
       user-select: none;
       padding: 20PX;
+      cursor: pointer;
       .title{
-        cursor: pointer;
         margin-bottom: 10PX;
         color: #00c3ed;
         font-size: 20PX;

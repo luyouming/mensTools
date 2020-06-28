@@ -61,10 +61,10 @@ export default {
   min-height: 10vh;
   .ContactUs-main {
       width: 100%;
-      display: flex;
       padding: 0 130px;
       box-sizing:border-box;
       margin: 120px 0;
+      
       .main-title {
         text-align: left;
         user-select: none;
@@ -73,10 +73,9 @@ export default {
         cursor: default;
         color: white;
       }
-
       .main-left {
         width: 100%;
-        height: 100%;
+        height: 360PX;
         background: url("~@/assets/CommonImg/ContactUs/bg88.jpg") no-repeat;
         background-size: cover;
       }
@@ -84,20 +83,20 @@ export default {
         user-select: none;
         cursor: default;
         color: white;
-        padding: 20px 0;
+        padding: 10PX 0;
         text-align: left;
-        line-height: 0.3rem;
-        font-size: 0.2rem;
+        line-height: 0.35rem;
+        font-size: 0.25rem;
       }
       .submit-main {
-        padding: 80px 30px 80px 30px !important;
+        height: 360PX;
+        padding: 0.5rem 0.2rem !important;
         background: url("~@/assets/CommonImg/ContactUs/worldmap.png") no-repeat;
         background-size: cover;
         background-position: center;
         background-color: #002e5a !important;
         box-sizing: border-box;
         display: inline-flex;
-        width: 50%;
         flex-direction: column;
         input,
         textarea {
@@ -105,7 +104,7 @@ export default {
           background-color: rgba(255, 255, 255, 0);
           box-sizing: border-box;
           width: 100%;
-          padding: 10px;
+          padding: 10PX;
           line-height: 20px;
           font-size: 0.2rem;
           outline: none;
@@ -130,12 +129,13 @@ export default {
           outline: none;
           border-radius: 1rem;
           width: 2rem;
-          height: 0.5rem;
+          height: 0.65rem;
+          line-height: 0.4rem;
           background-color: #0099ba;
           color: white;
           font-size: 0.3rem;
           letter-spacing: 0.2rem;
-          border: 3px solid #0099ba;
+          border: 3PX solid #0099ba;
           transition: all 0.3s;
           cursor: pointer;
           margin-top: 30px;
