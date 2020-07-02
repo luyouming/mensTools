@@ -1,9 +1,9 @@
 <template>
-  <div class="productDiscribe-container borderAnimation" :class="isEven ? 'borderAnimation-even' : ''">
+  <div @click="gotoAppArea()" class="productDiscribe-container borderAnimation" :class="isEven ? 'borderAnimation-even' : ''">
     <img class="iconPic" :src="require(`$static/icon/${productInfo.iconUrl}`)" alt />
     <h5 class="name">{{productInfo.name}}</h5>
     <div class="discribe">{{productInfo.discription}}</div>
-    <div class="news-item-details" :class="isEven ? 'news-item-details-even' : 'news-item-details'">
+    <div class="news-item-details"  :class="isEven ? 'news-item-details-even' : 'news-item-details'">
       展示详情
       <i class="el-icon-right" />
     </div>
@@ -35,7 +35,13 @@ export default {
     };
   },
   mounted() {},
-  methods: {}
+  methods: {
+    gotoAppArea() {
+      // console.log('jinlaile')
+      window.scrollTo(0, 0)
+      this.$router.push({ path: '/apparea' });
+    }
+  }
 };
 </script>
 
@@ -50,7 +56,6 @@ export default {
   background: #fff;
   color: #000;
   padding-top: 40px;
-  margin-bottom: 80px;
   .name {
     font-size: 18PX;
     font-family: "PingFang SC";

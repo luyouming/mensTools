@@ -11,7 +11,7 @@
         <div >公司动态</div>
         <div><span class="left"></span><span class="right"></span></div>
       </div>
-      <div class="newsBox" v-for="(item, index) in footerNews" :key="item + index">
+      <div class="newsBox" @click="gotoNews(item)" v-for="(item, index) in footerNews" :key="item + index">
         <img :src="require(`$assets/CommonImg/${item.imgUrl}`)" alt="">
         <div class="news">
           <p class="title">{{item.title}}</p>
@@ -39,20 +39,30 @@
 </template>
 
 <script>
+import commonInfo from "@/assets/CommonJs/commonInfo";
 export default {
   name: 'FooterBar',
   data () {
     return {
       footerIcons: ['person.png','person.png','person.png','person.png'],
-      footerNews:[{imgUrl: '1.jpg', title:'动态1', time: '2020-05-15 00:00:00'},
-                  {imgUrl: '2.jpg', title:'动态2', time: '2020-05-15 00:00:01'},
-                  {imgUrl: '3.jpg', title:'动态3', time: '2020-05-15 00:00:02'}],
+      footerNews: commonInfo.latestNews,
       footerContactWay: [{name: '联系人-段小姐', contactWay: '18112606475'},
                         //  {name: '联系人-冒小姐', contactWay: '18360485933'},
                          {name: '电话', contactWay: '0512 62995316'},
                          {name: '网址', contactWay: 'www.memstools.cn'},
                          {name: '邮箱', contactWay: 'info@memstools.cn'},
                          {name: '地址', contactWay: '江苏省苏州市工业园区星湖街218号生物纳米园A7-506'},]
+    }
+  },
+  methods: {
+    gotoNews(info){
+      // window.scrollTo(0, 0)
+      // this.$router.push({ path: '/news/all' });
+      this.$store.commit('SET_NEWS_INFO', info)
+      this.$router.push('/news/details')
+      setTimeout(() => {
+        document.documentElement.scrollTop = 0
+      }, 100)
     }
   }
 }
@@ -128,6 +138,7 @@ export default {
      .newsBox{
         width: 100%;
         margin: 20px auto;
+        cursor:pointer;
         img {
           float: left;
           width: 120PX;
@@ -146,6 +157,7 @@ export default {
              font-weight: 500;
              font-size: 18PX;
              font-family: "微软雅黑";
+             line-height: 28PX;
              color: #ccc;
            }
            .content{

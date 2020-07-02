@@ -1,12 +1,12 @@
 <template>
   <div class="swiper-Box">
     <!-- v-show="activeIndex === 2" -->
-    <div class="back1" v-show="activeIndex !== 2">
+    <div class="back1" @click="gotoNews(0)" v-show="activeIndex !== 2">
       <p class="title"><span class="year">2012</span>公司员工荣称</p>
       <p class="award">苏州工业园区科技</p>
       <p class="award">领军人才</p>
     </div>
-    <div class="back2" v-show="activeIndex === 2">
+    <div class="back2" @click="gotoNews(1)" v-show="activeIndex === 2">
       <p class="title">国家重点支持</p>
       <p class="award">高新技术企业</p>
     </div>
@@ -25,6 +25,7 @@
 import config from "@/config/index";
 import "swiper/dist/css/swiper.css";
 import Swiper from "swiper";
+import commonInfo from "@/assets/CommonJs/commonInfo";
 
 export default {
   props: {
@@ -40,7 +41,8 @@ export default {
   data() {
     return {
       msg: "hello，轮播图",
-      activeIndex: 0
+      activeIndex: 0,
+      newsInfo: commonInfo.latestNews
     };
   },
   mounted() {
@@ -65,6 +67,18 @@ export default {
       if (mySwiper) {
         this.msg = "初始化轮播图成功";
       }
+    },
+    gotoNews(index){
+      // window.scrollTo(0, 0)
+      // this.$router.push({ path: '/news/all' });
+      if(!this.newsInfo || !this.newsInfo[index]) {
+        console.log('没有这条新闻')
+      }
+      this.$store.commit('SET_NEWS_INFO', this.newsInfo[index])
+      this.$router.push('/news/details')
+      setTimeout(() => {
+        document.documentElement.scrollTop = 0
+      }, 100)
     }
   }
 };
@@ -85,6 +99,7 @@ export default {
     flex-direction: column;
     justify-content: space-around;
     align-items: flex-start;
+    cursor: pointer;
     .title{
       color: rgb(0, 195, 237);
       font-size: 70px;
@@ -112,6 +127,7 @@ export default {
   }
   .back2 {
     position: absolute;
+    cursor: pointer;
     z-index: 3;
     top: calc(50% - 150px);
     left: calc(50% - 400px);

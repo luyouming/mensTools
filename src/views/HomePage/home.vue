@@ -20,6 +20,7 @@
         </el-row>
       </div>
     </div>
+
     <!-- 产品海报图 -->
     <div class="content" v-show="false">
       <div class="provideGoodPro">
@@ -27,7 +28,7 @@
       </div>
     </div>
     <!-- 公司主营产品 -->
-    <div class="content">
+    <!-- <div class="content">
       <div class="mainProductTitle" v-show="false">
         <p class="name">
           公司
@@ -54,12 +55,38 @@
             :xl="6"
             :key="index + item"
           >
-            <div class="mainProduct">
+            <div class="mainProduct" @click="gotoProduct">
               <img class="imgPic" :src="require(`$assets/CommonImg/HomePage/${item.iconUrl}`)" alt />
               <p class="name">{{item.title}}</p>
               <div class="introduce">
                 <p class="introduce_name">{{item.title}}</p>
                 <p class="details">{{item.subTitle}}</p>
+              </div>
+            </div>
+          </el-col>
+        </el-row>
+      </div>
+    </div>-->
+    <div class="content">
+      <div class="prod-list">
+        <el-row v-for="(rowList, i) in showList" :key="`prod-${i}`" :gutter="30">
+          <el-col
+            v-for="(item, index) in rowList"
+            :xs="24"
+            :sm="12"
+            :md="12"
+            :lg="6"
+            :xl="6"
+            :key="`${i}-${index}`"
+          >
+            <div class="prod-item">
+              <div class="item-img">
+                <img :src="item.src" alt="图片" />
+              </div>
+              <div class="item-title">{{ item.title }}</div>
+              <div class="item-desc" @click="viewDetail(item)">
+                <span class="title">{{ item.title }}</span>
+                <span class="desc">{{ item.desc }}</span>
               </div>
             </div>
           </el-col>
@@ -111,6 +138,7 @@ import swiperImg from "@/components/public/swiperImg";
 import productDiscribe from "@/components/public/productDiscribe";
 import IcountUp from "vue-countup-v2";
 import commonInfo from "@/assets/CommonJs/commonInfo";
+import { mapState } from 'vuex'
 export default {
   name: "Home",
   data() {
@@ -165,6 +193,24 @@ export default {
       productList: commonInfo.productList
     };
   },
+  computed: {
+    ...mapState({
+      prodList: state => state.prod.prodList
+    }),
+    showList() {
+      const copNum = Math.ceil(this.prodList.length / 4);
+      const arr = [];
+      for (let i = 0; i < copNum; i++) {
+        const rowArr = [];
+        for (let j = 0; j < 4; j++) {
+          const index = i * 4 + j;
+          if (this.prodList[index]) rowArr.push(this.prodList[index]);
+        }
+        arr.push(rowArr);
+      }
+      return arr;
+    }
+  },
   mounted() {
     // setTimeout(() => {
     //   this.numberDanceStart = true
@@ -185,6 +231,16 @@ export default {
       this.$message.closeAll();
       this.$message.success("提交成功");
     },
+    viewDetail(info) {
+      this.$router.push("/prod/introduction/" + info.id);
+      setTimeout(() => {
+        document.documentElement.scrollTop = 0;
+      }, 100);
+    },
+    gotoProduct() {
+      window.scrollTo(0, 0);
+      this.$router.push({ path: "/prod/list" });
+    },
     handleScroll() {
       var scrollTop =
         window.pageYOffset ||
@@ -198,7 +254,7 @@ export default {
       }
     },
     onReady: function(instance, CountUp) {
-      console.log("进来了");
+      // console.log("进来了");
       // const that = this;
       // instance.start(that.endVal + 100);
     }
@@ -219,7 +275,7 @@ export default {
       width: 100%;
       padding: 0 130px;
       box-sizing: border-box;
-      margin: 40px 0 0px 0;
+      margin: 60px 0 60px 0;
     }
     .provideGoodPro {
       box-sizing: border-box;
@@ -264,111 +320,174 @@ export default {
         }
       }
     }
-    .mainProductTitle {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      .name {
-        font-size: 78px;
-        color: #000;
-        font-weight: bold;
-        font-family: "黑体";
-        .keyWord {
-          color: #00c3ed;
-        }
-      }
-      .details {
-        margin: 40px 0 20px 0;
-        font-size: 28px;
-        color: #676767;
-        font-weight: 200;
-        line-height: 45px;
-        width: 60%;
-      }
-      .line {
-        height: 6px;
-        span {
-          display: inline-block;
-          width: 55px;
-          height: 100%;
-          background: #ddd;
-          border-radius: 20px;
-        }
-        .blue {
-          background: #00c3ed;
-        }
-      }
-    }
-    .mainProductBox {
+    .prod-list {
       width: 100%;
       padding: 0 130px;
       box-sizing: border-box;
-      margin: 0px 0 40px 0;
-      .mainProduct {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        background: #fff;
-        color: #000;
-        margin-bottom: 80px;
+      margin: 0px 0 0px 0;
+      .prod-item {
         position: relative;
-        height: 500px;
-        .imgPic {
-          width: 100%;
-          height: 100%;
+        margin-bottom: 60px;
+        .item-img {
+          img {
+            width: 100%;
+          }
         }
-        .name {
+        .item-title {
+          cursor: default;
           position: absolute;
-          bottom: 0;
-          left: 0;
-          width: 100%;
-          height: 120px;
-          line-height: 120px;
-          font-size: 38px;
-          font-weight: bold;
-          font-family: "黑体";
-          background: rgba(0, 46, 90, 0.9);
           color: #00c3ed;
-        }
-        .introduce {
-          position: absolute;
-          top: 0px;
-          left: 0;
+          bottom: 0px;
+          height: 50px;
+          font-size: 20px;
+          line-height: 50px;
           width: 100%;
-          height: 100%;
-          border-radius: 8px;
+          font-weight: 700;
+          transition: all 900ms ease;
           background: rgba(0, 46, 90, 0.9);
-          padding: 180px 30px 0 30px;
+        }
+        .item-desc {
+          position: absolute;
+          width: 100%;
+          opacity: 0;
+          transition: all 900ms ease;
+          display: flex;
+          align-items: center;
+          top: 0;
+          left: 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          background: rgba(0, 46, 90, 0.9);
+          height: 100%;
           box-sizing: border-box;
-          animation: topEaseInAnimate; /*动画名称*/
-          animation-duration: 0.3s; /*动画持续时间*/
-          -webkit-animation: topEaseInAnimate 0.3s; /*针对webkit内核*/
-          display: none;
-          .introduce_name {
-            font-size: 38px;
-            font-weight: bold;
-            font-family: "黑体";
+          user-select: none;
+          padding: 20px;
+          cursor: pointer;
+          .title {
+            margin-bottom: 10px;
             color: #00c3ed;
+            font-size: 20px;
+            font-weight: 700;
           }
-          .details {
-            font-size: 25px;
-            color: #efefef;
-            font-weight: 200;
-            line-height: 45px;
+          .desc {
+            font-size: 14px;
+            line-height: 16px;
+            color: white;
           }
         }
-      }
-      .mainProduct:hover .name {
-        display: none;
-      }
-      .mainProduct:hover .introduce {
-        display: block;
+        &:hover {
+          .item-desc {
+            opacity: 1;
+          }
+        }
       }
     }
+    // .mainProductTitle {
+    //   display: flex;
+    //   flex-direction: column;
+    //   justify-content: center;
+    //   align-items: center;
+    //   .name {
+    //     font-size: 78px;
+    //     color: #000;
+    //     font-weight: bold;
+    //     font-family: "黑体";
+    //     .keyWord {
+    //       color: #00c3ed;
+    //     }
+    //   }
+    //   .details {
+    //     margin: 40px 0 20px 0;
+    //     font-size: 28px;
+    //     color: #676767;
+    //     font-weight: 200;
+    //     line-height: 45px;
+    //     width: 60%;
+    //   }
+    //   .line {
+    //     height: 6px;
+    //     span {
+    //       display: inline-block;
+    //       width: 55px;
+    //       height: 100%;
+    //       background: #ddd;
+    //       border-radius: 20px;
+    //     }
+    //     .blue {
+    //       background: #00c3ed;
+    //     }
+    //   }
+    // }
+    // .mainProductBox {
+    //   width: 100%;
+    //   padding: 0 130px;
+    //   box-sizing: border-box;
+    //   margin: 0px 0 40px 0;
+    //   .mainProduct {
+    //     display: flex;
+    //     flex-direction: column;
+    //     flex-wrap: nowrap;
+    //     justify-content: center;
+    //     align-items: center;
+    //     width: 100%;
+    //     background: #fff;
+    //     color: #000;
+    //     margin-bottom: 80px;
+    //     position: relative;
+    //     height: 500px;
+    //     .imgPic {
+    //       width: 100%;
+    //       height: 100%;
+    //     }
+    //     .name {
+    //       position: absolute;
+    //       bottom: 0;
+    //       left: 0;
+    //       width: 100%;
+    //       height: 120px;
+    //       line-height: 120px;
+    //       font-size: 38px;
+    //       font-weight: bold;
+    //       font-family: "黑体";
+    //       background: rgba(0, 46, 90, 0.9);
+    //       color: #00c3ed;
+    //     }
+    //     .introduce {
+    //       position: absolute;
+    //       top: 0px;
+    //       left: 0;
+    //       width: 100%;
+    //       height: 100%;
+    //       border-radius: 8px;
+    //       background: rgba(0, 46, 90, 0.9);
+    //       padding: 180px 30px 0 30px;
+    //       box-sizing: border-box;
+    //       animation: topEaseInAnimate; /*动画名称*/
+    //       animation-duration: 0.3s; /*动画持续时间*/
+    //       -webkit-animation: topEaseInAnimate 0.3s; /*针对webkit内核*/
+    //       display: none;
+    //       .introduce_name {
+    //         font-size: 38px;
+    //         font-weight: bold;
+    //         font-family: "黑体";
+    //         color: #00c3ed;
+    //       }
+    //       .details {
+    //         font-size: 25px;
+    //         color: #efefef;
+    //         font-weight: 200;
+    //         line-height: 45px;
+    //       }
+    //     }
+    //   }
+    //   .mainProduct:hover .name {
+    //     display: none;
+    //   }
+    //   .mainProduct:hover .introduce {
+    //     display: block;
+    //   }
+    // }
     .ContactUs-main {
       width: 100%;
       display: flex;
