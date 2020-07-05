@@ -9,7 +9,7 @@
                 <div class="thumb">
                   <img :src="item.src" alt="图片">
                 </div>
-                <div class="link"><i class="el-icon-link" /></div>
+                <div class="link" @click="viewNews(item)"><i class="el-icon-link" /></div>
               </div>
               <div class="news-item-title" @click="viewNews(item)">
                 {{ item.title }}
@@ -23,7 +23,7 @@
               <div class="news-item-desc">
                 {{ item.desc }}
               </div>
-              <div class="news-item-details">
+              <div class="news-item-details" @click="viewNews(item)">
                 展示详情 <i class="el-icon-right" />
               </div>
             </div>
@@ -34,6 +34,7 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 import titleBar from '$components/public/titleBar'
 export default {
   name: 'newsAll',
@@ -42,35 +43,12 @@ export default {
   },
   data() {
     return {
-      newsList: [
-        {
-          id: '1',
-          title: '2017年苏州工业园区金鸡湖人才计划科技领军人才',
-          time: '04-24 13:27:49',
-          keyword: '人才,获奖',
-          src: require('$assets/CommonImg/1.jpg'),
-          desc: '2017年12月27日下午，苏州工业园区第八届金鸡湖人才表彰大会在现代大厦召开，此次大会授予437人“金鸡湖人才”称....'
-        },
-        {
-          id: '2',
-          src: require('$assets/CommonImg/2.jpg'),
-          title: '祝贺我司获得“高新技术企业”荣誉证书',
-          time: '02-14 09:51:33',
-          keyword: '证书,获奖',
-          desc: '苏州美图半导体技术有限公司被授予“高新技术企业”荣誉证书，大大提高了我公司参与各项招投标业务的竞争力，同时也进一步提升了我公司的....'
-        },
-        {
-          id: '3',
-          src: require('$assets/CommonImg/3.jpg'),
-          title: '中国微米纳米技术学会第十八届学术年会暨微系统与纳米工程高层论坛',
-          time: '2020-01-01 00:00:00',
-          keyword: '会议, 学术',
-          desc: '中国微米纳米技术学会第十八届学术年会暨微系统与纳米工程高层论坛北京市新疆大厦 展位号：16....'
-        }
-      ]
     }
   },
   computed: {
+    ...mapState({
+      newsList:  state => state.news.newsList
+    }),
     showList() {
       // 每行三列
       const copNum = Math.ceil(this.newsList.length / 3)
@@ -88,8 +66,7 @@ export default {
   },
   methods: {
     viewNews(info) {
-      this.$store.commit('SET_NEWS_INFO', info)
-      this.$router.push('/news/details')
+      this.$router.push('/news/details/' + info.id)
       setTimeout(() => {
         document.documentElement.scrollTop = 0
       }, 100)

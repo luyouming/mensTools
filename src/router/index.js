@@ -91,7 +91,7 @@ export default new Router({
           name: 'newsAll',
           component: () => import('@/views/News/all.vue'),
         }, {
-          path: '/news/details',
+          path: '/news/details/:id',
           name: 'newsDetails',
           component: () => import('@/views/News/details.vue'),
         }

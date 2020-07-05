@@ -337,10 +337,10 @@ export default {
           cursor: default;
           position: absolute;
           color: #00c3ed;
-          bottom: 0px;
-          height: 50px;
+          bottom: 0;
+          height: 50PX;
           font-size: 20px;
-          line-height: 50px;
+          line-height: 50PX;
           width: 100%;
           font-weight: 700;
           transition: all 900ms ease;
@@ -372,7 +372,7 @@ export default {
           }
           .desc {
             font-size: 14px;
-            line-height: 16px;
+            line-height: 0.3rem;
             color: white;
           }
         }

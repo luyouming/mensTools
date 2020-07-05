@@ -109,7 +109,7 @@ export default {
       }
       .desc{
         font-size: 14PX;
-        line-height: 16PX;
+        line-height: 20PX;
         color: white;
       }
     }

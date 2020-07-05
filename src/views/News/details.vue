@@ -13,17 +13,29 @@ export default {
   components: {
     titleBar
   },
+  data() {
+    return {
+      showInfo: {}
+    }
+  },
   computed: {
     ...mapState({
       newsInfo: state => state.news.newsInfo,
       newsList: state => state.news.newsList
-    }),
-    showInfo() {
-      if (this.newsInfo.id) {
-        return this.newsList.find(a => a.id === this.newsInfo.id)
-      } else {
-        return this.newsList[0]
-      }
+    })
+  },
+  beforeRouteUpdate(to, from, next) {
+    next()
+    this.initInfo()
+  },
+  mounted() {
+    this.initInfo()
+  },
+  methods: {
+    initInfo() {
+      this.id = this.$route.params.id
+      const info = this.newsList.find(a => a.id === this.id)
+      this.showInfo = Object.assign({}, (info || this.prodList[0]))
     }
   }
 }
@@ -38,9 +50,10 @@ export default {
     font-weight: 650;
     line-height: 1.5;
     margin-bottom: 0.3rem;
-    margin-top: 0.75rem;
   }
   p{
+    font-size: 0.3rem;
+    line-height: 1.2;
     margin-bottom: 20PX;
   }
 }

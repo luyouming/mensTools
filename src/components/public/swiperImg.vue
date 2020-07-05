@@ -74,8 +74,7 @@ export default {
       if(!this.newsInfo || !this.newsInfo[index]) {
         console.log('没有这条新闻')
       }
-      this.$store.commit('SET_NEWS_INFO', this.newsInfo[index])
-      this.$router.push('/news/details')
+      this.$router.push('/news/details/' + info.id)
       setTimeout(() => {
         document.documentElement.scrollTop = 0
       }, 100)

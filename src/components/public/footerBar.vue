@@ -58,8 +58,7 @@ export default {
     gotoNews(info){
       // window.scrollTo(0, 0)
       // this.$router.push({ path: '/news/all' });
-      this.$store.commit('SET_NEWS_INFO', info)
-      this.$router.push('/news/details')
+      this.$router.push('/news/details/' + info.id)
       setTimeout(() => {
         document.documentElement.scrollTop = 0
       }, 100)
