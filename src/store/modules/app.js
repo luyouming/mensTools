@@ -5,7 +5,7 @@ const mutations = {
 }
 const actions = {
   submitFeedBack(state, params) {
-    return axios.post('http://szmeitu123.gotoip11.com/api/User/AddFeedBack', params)
+    return axios.post('http://szmeitu123.gotoip11.com/server/api/User/AddFeedBack', params)
   }
 }
 export default {
