@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import news from './modules/news'
 import prod from './modules/prod'
+import app from './modules/app'
 
 //挂载Vuex
 Vue.use(Vuex)
@@ -10,7 +11,8 @@ Vue.use(Vuex)
 const store = new Vuex.Store({
     modules: {
         news,
-        prod
+        prod,
+        app
     }
 })
 

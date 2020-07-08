@@ -5,12 +5,12 @@
       <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
         <div class="main-left" />
       </el-col>
-      <el-col class="submit-main" :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
+      <el-col v-loading="loading" class="submit-main" :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
         <div class="main-title">留言</div>
         <div class="main-desc">欢迎来到苏州美图半导体有限公司官方网站。 关于产品的使用问题、改进建议，或举报不良信息，您都可以填写下方信息告诉我们，我们重视您的每一个想法</div>
         <input v-model="data.name" type="text" maxlength="10" placeholder="姓名*" />
-        <input v-model="data.email" type="text" maxlength="20" placeholder="邮箱*" />
         <input v-model="data.phone" type="text" maxlength="11" placeholder="手机*" />
+        <input v-model="data.email" type="text" maxlength="20" placeholder="邮箱*" />
         <textarea v-model="data.desc" type="text"  placeholder="需要 / 改进 / 建议" />
         <button @click="submitInfo">提交</button>
       </el-col>
@@ -33,6 +33,7 @@ export default {
   },
   data() {
     return {
+      loading: false,
       data: {
         name: '',
         phone: '',
@@ -43,14 +44,38 @@ export default {
   },
   methods: {
     submitInfo() {
-      this.data = {
-        name: '',
-        phone: '',
-        email: '',
-        desc: ''
+      const { name, phone, email, desc } = this.data
+      const fields = ['name', 'phone', 'email', 'desc']
+      const tips = ['姓名', '手机号', '邮箱', '需要 / 改进 / 建议']
+      let res = true
+      for (let i = 0; i < fields.length; i++) {
+        if (!this.data[fields[i]]) {
+          this.$message.closeAll()
+          this.$message.error(`请填写${tips[i]}`)
+          res = false
+          break
+        }
       }
-      this.$message.closeAll()
-      this.$message.success('提交成功')
+      if (!res) return
+      this.loading = true
+      this.$store.dispatch('submitFeedBack', this.data).then(res => {
+        this.$message.closeAll()
+        if (res.code === 1) {
+          this.$message.success('提交成功')
+          this.data = {
+            name: '',
+            phone: '',
+            email: '',
+            desc: ''
+          }
+        } else {
+          this.$message.error('提交失败')
+        }
+      }).catch(err => {
+        this.$message.error('服务异常,请稍候再试')
+      }).finally(() => {
+        this.loading = false
+      })
     }
   }
 }
