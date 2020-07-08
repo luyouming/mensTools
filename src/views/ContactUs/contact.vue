@@ -11,7 +11,7 @@
         <input v-model="data.name" type="text" maxlength="10" placeholder="姓名*" />
         <input v-model="data.phone" type="text" maxlength="11" placeholder="手机*" />
         <input v-model="data.email" type="text" maxlength="20" placeholder="邮箱*" />
-        <textarea v-model="data.desc" type="text"  placeholder="需要 / 改进 / 建议" />
+        <textarea v-model="data.remark" type="text"  placeholder="需要 / 改进 / 建议" />
         <button @click="submitInfo">提交</button>
       </el-col>
     </el-row>
@@ -38,14 +38,14 @@ export default {
         name: '',
         phone: '',
         email: '',
-        desc: ''
+        remark: ''
       }
     }
   },
   methods: {
     submitInfo() {
-      const { name, phone, email, desc } = this.data
-      const fields = ['name', 'phone', 'email', 'desc']
+      const { name, phone, email, remark } = this.data
+      const fields = ['name', 'phone', 'email', 'remark']
       const tips = ['姓名', '手机号', '邮箱', '需要 / 改进 / 建议']
       let res = true
       for (let i = 0; i < fields.length; i++) {
