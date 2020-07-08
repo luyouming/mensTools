@@ -73,7 +73,7 @@ export default new Router({
           name: 'appareaAll',
           component: () => import('@/views/Apparea/all.vue'),
         }, {
-          path: '/apparea/introduction',
+          path: '/apparea/introduction/:id',
           name: 'appareaIntroduction',
           component: () => import('@/views/Apparea/introduction.vue'),
         }

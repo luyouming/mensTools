@@ -1,21 +1,45 @@
 const productList = [{
+  id: '1',
   name: "生物芯片",
+  desc:'生物芯片专用设备',
+  size: '200mm * 100mm',
+  material: '硅胶纳米材料',
+  technique: '工艺23432',
   iconUrl: `product1.png`,
+  imgUrl: `appArea1.jpg`,
   discription: "产品描述产产品描述产产品描述产品描述产品描述产品描述产品描述产品描述"
 },
 {
+  id: '2',
   name: "三维封装",
+  desc:'CIS三维封装',
+  size: '200mm * 100mm',
+  material: '硅胶纳米材料',
+  technique: '工艺23432',
   iconUrl: `product2.png`,
+  imgUrl: `appArea2.jpg`,
   discription: "产品描述产产品描述产产品描述产品描述产品描述产品描述产品描述产品描述"
 },
 {
+  id: '3',
   name: "MEMS",
+  desc:'MEMS器件制造',
+  size: '200mm * 100mm',
+  material: '硅胶纳米材料',
+  technique: '工艺23432',
   iconUrl: `product3.png`,
+  imgUrl: `appArea3.jpg`,
   discription: "产品描述产产品描述产产品描述产品描述产品描述产品描述产品描述产品描述"
 },
 {
+  id: '4',
   name: "薄片传输",
+  desc:'薄片传输',
+  size: '200mm * 100mm',
+  material: '硅胶纳米材料',
+  technique: '工艺23432',
   iconUrl: `product4.png`,
+  imgUrl: `appArea4.jpg`,
   discription: "产品描述产产品描述产产品描述产品描述产品描述产品描述产品描述产品描述"
 }
 ]

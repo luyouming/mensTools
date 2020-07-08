@@ -1,5 +1,5 @@
 <template>
-  <div @click="gotoAppArea()" class="productDiscribe-container borderAnimation" :class="isEven ? 'borderAnimation-even' : ''">
+  <div @click="gotoAppArea(productInfo)" class="productDiscribe-container borderAnimation" :class="isEven ? 'borderAnimation-even' : ''">
     <img class="iconPic" :src="require(`$static/icon/${productInfo.iconUrl}`)" alt />
     <h5 class="name">{{productInfo.name}}</h5>
     <div class="discribe">{{productInfo.discription}}</div>
@@ -36,10 +36,11 @@ export default {
   },
   mounted() {},
   methods: {
-    gotoAppArea() {
+    gotoAppArea(info) {
       // console.log('jinlaile')
       window.scrollTo(0, 0)
-      this.$router.push({ path: '/apparea' });
+      this.$router.push('/apparea/introduction/' + info.id)
+      // this.$router.push({ path: '/apparea' });
     }
   }
 };

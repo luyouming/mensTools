@@ -46,11 +46,12 @@ export default {
  width: 100%;
  .content {
     width: 100%;
+
     .productBox {
       width: 100%;
       padding: 0 130px;
       box-sizing: border-box;
-      margin: 120px 0 40px 0;
+      margin: 120px 0;
     }
  }
 }
