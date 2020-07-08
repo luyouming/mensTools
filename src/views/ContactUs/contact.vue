@@ -66,7 +66,7 @@ export default {
             name: '',
             phone: '',
             email: '',
-            desc: ''
+            remark: ''
           }
         } else {
           this.$message.error('提交失败')

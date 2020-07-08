@@ -116,7 +116,7 @@
     <div class="content">
       <div class="ContactUs-main">
         <div class="main-left" />
-        <div class="submit-main">
+        <div class="submit-main" v-loading="loading">
           <div class="main-title">留言</div>
           <div
             class="main-desc"
@@ -124,7 +124,7 @@
           <input v-model="data.name" type="text" maxlength="10" placeholder="姓名*" />
           <input v-model="data.email" type="text" maxlength="20" placeholder="邮箱*" />
           <input v-model="data.phone" type="text" maxlength="11" placeholder="手机*" />
-          <textarea v-model="data.desc" type="text" placeholder="需要 / 改进 / 建议" />
+          <textarea v-model="data.remark" type="text" placeholder="需要 / 改进 / 建议" />
           <button @click="submitInfo">提交</button>
         </div>
       </div>
@@ -143,11 +143,12 @@ export default {
   name: "Home",
   data() {
     return {
+      loading: false,
       data: {
         name: "",
         phone: "",
         email: "",
-        desc: ""
+        remark: ""
       },
       numberDanceStart: false,
       options: {
@@ -222,14 +223,38 @@ export default {
   },
   methods: {
     submitInfo() {
-      this.data = {
-        name: "",
-        phone: "",
-        email: "",
-        desc: ""
-      };
-      this.$message.closeAll();
-      this.$message.success("提交成功");
+      const { name, phone, email, remark } = this.data
+      const fields = ['name', 'phone', 'email', 'remark']
+      const tips = ['姓名', '手机号', '邮箱', '需要 / 改进 / 建议']
+      let res = true
+      for (let i = 0; i < fields.length; i++) {
+        if (!this.data[fields[i]]) {
+          this.$message.closeAll()
+          this.$message.error(`请填写${tips[i]}`)
+          res = false
+          break
+        }
+      }
+      if (!res) return
+      this.loading = true
+      this.$store.dispatch('submitFeedBack', this.data).then(res => {
+        this.$message.closeAll()
+        if (res.Code === 1) {
+          this.$message.success('提交成功')
+          this.data = {
+            name: '',
+            phone: '',
+            email: '',
+            remark: ''
+          }
+        } else {
+          this.$message.error('提交失败')
+        }
+      }).catch(err => {
+        this.$message.error('服务异常,请稍候再试')
+      }).finally(() => {
+        this.loading = false
+      })
     },
     viewDetail(info) {
       this.$router.push("/prod/introduction/" + info.id);
