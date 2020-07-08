@@ -86,7 +86,7 @@ export default {
 <style lang="scss" >
 .swiper-Box {
   width: 100%;
-  height: 800px;
+  height: 600PX;
   position: relative;
   .back1 {
     position: absolute;
@@ -160,7 +160,7 @@ export default {
   /* 以下是swiper的轮播图 */
   .swiper-container {
     width: 100%;
-    height: 800px;
+    height: 600PX;
     display: block;
 
     .swiper-slide img {
@@ -168,7 +168,7 @@ export default {
       height: 100%;
     }
     .swiper-wrapper {
-      height: 100%;
+      height: 600PX;
     }
     .swiper-slide {
       text-align: center;
