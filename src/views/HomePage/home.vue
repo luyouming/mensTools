@@ -239,7 +239,7 @@ export default {
       this.loading = true
       this.$store.dispatch('submitFeedBack', this.data).then(res => {
         this.$message.closeAll()
-        if (res.Code === 1) {
+        if (res.data.Code === 1) {
           this.$message.success('提交成功')
           this.data = {
             name: '',
