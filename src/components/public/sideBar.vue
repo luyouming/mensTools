@@ -55,43 +55,42 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-width: 60px;
+  width: 40PX;
   position: fixed;
   z-index: 999;
-  top: calc(50% - 120px);
-  right: 10px;
+  top: calc(50% - 160PX);
+  right: 5PX;
   div {
     width: 100%;
-    height: 60px;
+    height: 40PX;
     border-bottom: 1px solid white;
     background: #6db0f9;
-    // cursor: pointer;
+    cursor: default;
     position: relative;
     .icon {
-      font-size: 40px;
+      font-size: 24PX;
       color: #fff;
       font-weight: bold;
     }
     .qqImg {
-      width: 50px;
-      height: 50px;
+      width: 30PX;
+      height: 30PX;
     }
     .friendImg{
-      height: 55px;
-      width: 60px;
-      margin-bottom: 10px;
+      height: 30PX;
+      width: 30PX;
+      margin-bottom: 10PX;
     }
     .Box, .topBox {
       position: absolute;
       top: 0;
       right: 0;
       // width: 260px;
-      height: 60px;
+      height: 40PX;
       // border: 1px solid red;
       display: flex;
       justify-content: center;
       align-items: center;
-      
       .number {
         color: white;
         font-size: 22PX;
@@ -103,8 +102,11 @@ export default {
     .topBox:hover{
      cursor: pointer;
     }
+    .Box{
+      transition: all .3s;
+    }
     .Box:hover{
-      width: 230px;
+      width: 230PX;
     }
     .Box:hover .number{
       display: block;
