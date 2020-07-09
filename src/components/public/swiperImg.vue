@@ -7,8 +7,10 @@
       <p class="award">领军人才</p>
     </div>
     <div class="back2" @click="gotoNews(1)" v-show="activeIndex === 2">
+      <div>
       <p class="title">国家重点支持</p>
       <p class="award">高新技术企业</p>
+      </div>
     </div>
     <div class="swiper-container">
       <div class="swiper-wrapper">
@@ -69,12 +71,10 @@ export default {
       }
     },
     gotoNews(index){
-      // window.scrollTo(0, 0)
-      // this.$router.push({ path: '/news/all' });
       if(!this.newsInfo || !this.newsInfo[index]) {
         console.log('没有这条新闻')
       }
-      this.$router.push('/news/details/' + info.id)
+      this.$router.push('/news/details/' + this.newsInfo[index].id)
       setTimeout(() => {
         document.documentElement.scrollTop = 0
       }, 100)
@@ -91,7 +91,7 @@ export default {
   .back1 {
     position: absolute;
     z-index: 3;
-    top: 200px;
+    top: 1rem;
     left: 100px;
     height: 300px;
     display: flex;
@@ -101,7 +101,7 @@ export default {
     cursor: pointer;
     .title{
       color: rgb(0, 195, 237);
-      font-size: 70px;
+      font-size: .8rem;
       font-weight: 500;
       padding: 15px;
       font-family: "微软雅黑";
@@ -111,13 +111,13 @@ export default {
       animation: bottomEaseInAnimate 2s ease 1; /*调用动画：动画名、时间、时间线条、播放次数*/
     animation-fill-mode: forwards;/*定义动画结束的状态*/
       .year{
-       font-size: 70px;
+       font-size: .8rem;
        font-weight: bold;
       }
     }
     .award{
       color: #fff;
-      font-size: 150px;
+      font-size: .8rem;
       font-weight: 800;
       font-family: "微软雅黑";
       animation: topEaseInAnimate 2s ease 1; /*调用动画：动画名、时间、时间线条、播放次数*/
@@ -126,19 +126,19 @@ export default {
   }
   .back2 {
     position: absolute;
+    width: 100%;
+    height: 100%;
     cursor: pointer;
     z-index: 3;
-    top: calc(50% - 150px);
-    left: calc(50% - 400px);
-    min-width: 800px;
-    height: 300px;
+    top: 0;
+    left: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     .title{
       color: rgb(0, 195, 237);
-      font-size: 70px;
+      font-size: .8rem;
       font-weight: 500;
       padding: 15px;
       font-family: "微软雅黑";
@@ -149,7 +149,7 @@ export default {
     }
     .award{
       color: #fff;
-      font-size: 150px;
+      font-size: .8rem;
       font-weight: 800;
       font-family: "微软雅黑";
       animation: leftEaseInAnimate 2s ease 1; /*调用动画：动画名、时间、时间线条、播放次数*/

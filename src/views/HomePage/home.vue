@@ -316,31 +316,30 @@ export default {
       flex-direction: row;
       justify-content: space-around;
       align-items: center;
-      padding: 0 60px;
       margin-bottom: 20PX;
-      height: 500px;
-      background: url("~@/assets/CommonImg/HomePage/numberDance-bg.png")
-        no-repeat;
+      height: 6rem;
+      background: url("~@/assets/CommonImg/HomePage/numberDance-bg.png") no-repeat;
       background-size: cover;
       .numberDance {
+        text-align: center;
         display: flex;
+        flex: 1;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         .imgPic {
-          width: 60px;
-          height: 60px;
+          width: 40PX;
+          height: 40PX;
         }
         .number {
           font-weight: 800;
           font-family: "Ping Fang SC";
-          font-size: 80px;
-          margin: 30px 0;
-          min-width: 280px;
+          font-size: .6rem;
+          margin: 10PX 0;
         }
         .name {
           font-family: "微软雅黑";
-          font-size: 30px;
+          font-size: .6rem;
           font-weight: 600;
         }
       }

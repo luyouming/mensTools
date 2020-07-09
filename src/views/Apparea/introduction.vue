@@ -1,5 +1,5 @@
 <template>
-  <div class="Apparea-intro-container DefaultContainerStyle">
+  <div class="Apparea-intro-container">
     <title-bar :text="prodInfo.name" />
     <div class="contentBox">
       <!-- <img :src="require(`$assets/CommonImg/AppArea/${prodInfo.imgUrl}`)" alt="">
@@ -66,12 +66,7 @@ export default {
 
 <style scoped lang="scss">
 .Apparea-intro-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   width: 100%;
-
   .contentBox {
     width: 100%;
     padding: 0 130px;
