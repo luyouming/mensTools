@@ -364,7 +364,7 @@ export default {
           color: #00c3ed;
           bottom: 0;
           height: 50PX;
-          font-size: 20px;
+          font-size: 20PX;
           line-height: 50PX;
           width: 100%;
           font-weight: 700;
@@ -392,11 +392,11 @@ export default {
           .title {
             margin-bottom: 10px;
             color: #00c3ed;
-            font-size: 20px;
+            font-size: 20PX;
             font-weight: 700;
           }
           .desc {
-            font-size: 14px;
+            font-size: 14PX;
             line-height: 0.3rem;
             color: white;
           }
@@ -539,7 +539,7 @@ export default {
         color: white;
         padding: 20px 0;
         text-align: left;
-        line-height: 0.3rem;
+        line-height: 0.35rem;
         font-size: 0.2rem;
       }
       .submit-main {
