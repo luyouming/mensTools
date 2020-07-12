@@ -185,7 +185,7 @@ export default {
     }
     @media screen and (max-width: 1200px) {
       .TopBar-container {
-        padding-top: 52PX;
+        padding-top: 22PX;
           .nav-centent-phone{
             display: block;
           }
@@ -194,10 +194,10 @@ export default {
           }
           .imgPic{
             position: absolute;
-            top: 0;
+            top: 12PX;
             left: 200px;
-            height: 96PX;
-            width: 195PX;
+            height: 40PX;
+            // width: 195PX;
           }
       }
     }
@@ -213,7 +213,7 @@ export default {
         .imgPic{
         position: absolute;
         left: 200px;
-        height: 100%;
+        height: 60%;
       }
       }
     }

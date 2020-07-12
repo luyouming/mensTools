@@ -15,8 +15,8 @@ const state = {
                 予437人“金鸡湖人才”称号，其中30名高层次领军人才、183名科技领军人才、29名科教领
                 军人才、6名高端服务业领军人才、189名高技能领军人才，我公司资深研究员冒薇博士有幸成   
                 为其中一员。</p>
-                <img style="margin: 20PX auto; display: block; max-width: 80%; max-height: 560PX" src="/static/news/金鸡湖人才证书.jpg" />
-                <img style="margin: 20PX auto; display: block; max-width: 80%; max-height: 560PX"" src="/static/news/科技领军人才合照.jpg" />
+                <img style="margin: 20PX auto; display: block; max-width: 70%; max-height: 560PX" src="/static/news/金鸡湖人才证书.jpg" />
+                <img style="margin: 20PX auto; display: block; max-width: 70%; max-height: 560PX"" src="/static/news/科技领军人才合照.jpg" />
             </div></div>`
         },
         {

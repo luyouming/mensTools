@@ -2,12 +2,12 @@
   <div class="ProdIntro-container">
     <titleBar :text="prodInfo.title"/>
     <el-row class="prod-info">
-      <el-col class="prod-img" :xs="24" :sm="24" :md="24" :lg="12" :xl="12"><img :src="prodInfo.src" alt=""></el-col>
-      <el-col class="prod-desc" :xs="24" :sm="24" :md="24" :lg="12" :xl="12">
-        <div class="title">{{ prodInfo.title }}</div>
+      <el-col class="prod-desc" :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
+        <!-- <div class="title">{{ prodInfo.title }}</div> -->
         <div class="defaultFont summary">
           {{ prodInfo.summary }}
         </div>
+      <el-col class="prod-img" :xs="24" :sm="24" :md="24" :lg="24" :xl="24"><img :src="prodInfo.src" alt=""></el-col>
       </el-col>
     </el-row>
     <div v-if="prodInfo.principle" class="other defaultFont" v-html="prodInfo.principle" />
@@ -59,17 +59,18 @@ export default {
 </style>
 <style scoped lang="scss">
 .prod-info{
-  padding: 0.5rem 1rem 0 1rem;
+  padding: 20PX 1rem;
   .prod-img{
-    padding-right: 1rem;
+    display: flex;
+    justify-content: center;
     img{
-      width: 100%;
+      width: 50%;
+      height: 50%;
     }
   }
   .prod-desc{
     box-sizing: border-box;
     text-align: left;
-    padding: 1rem 0 0 0;
     .title{
       font-size: 0.55rem;
       font-weight: 800;

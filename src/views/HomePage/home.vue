@@ -430,13 +430,13 @@ export default {
         user-select: none;
         cursor: default;
         color: white;
-        padding: 20px 0;
+        padding: 10PX 0;
         text-align: left;
         line-height: 0.35rem;
-        font-size: 0.2rem;
+        font-size: 0.25rem;
       }
       .submit-main {
-        padding: 80PX 30PX 80PX 30PX !important;
+        padding: 0.5rem 0.2rem !important;
         background: url("~@/assets/CommonImg/ContactUs/worldmap.png") no-repeat;
         background-size: cover;
         background-position: center;
@@ -451,7 +451,7 @@ export default {
           background-color: rgba(255, 255, 255, 0);
           box-sizing: border-box;
           width: 100%;
-          padding: 10px;
+          padding: 10PX;
           line-height: 20px;
           font-size: 0.2rem;
           outline: none;

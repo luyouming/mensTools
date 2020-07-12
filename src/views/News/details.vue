@@ -43,9 +43,10 @@ export default {
 
 <style lang="scss">
 .news-details-main{
-  padding: 30PX 20PX;
+  padding: 30PX 1rem;
   text-align: left;
   h5 {
+    text-align: center;
     font-size: 0.38rem;
     font-weight: 650;
     line-height: 1.5;

@@ -95,6 +95,7 @@ export default {
       position: relative;
       overflow: hidden;
       img{
+        height: 100%;
         transition: all 0.4s ease-in-out;
         clip-path: polygon(130% 0, 92% 100%, 0 82%, 0 0);
         width: 100%;

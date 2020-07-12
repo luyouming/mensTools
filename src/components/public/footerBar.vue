@@ -172,7 +172,7 @@ export default {
         .main{
           font-size: 18PX;
           line-height: 1PX;
-          padding: 30px 0;
+          padding: 15PX 0;
           border-bottom: 1px solid #444;
          .name{
           float: left;
