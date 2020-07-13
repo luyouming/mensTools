@@ -42,8 +42,28 @@ export default {
 </script>
 
 <style lang="scss">
+@media screen and (min-width: 768px) {
+  .news-details-main{
+    margin: auto;
+    padding: 20PX 0;
+    width: 600PX;
+    img{
+      width: 100%;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .news-details-main{
+    padding: 20PX 1rem;
+    // width: 100%;
+    img{
+      width: 100%;
+    }
+  }
+}
 .news-details-main{
-  padding: 30PX 1rem;
+  box-sizing: border-box;
+  // padding: 30PX 1rem;
   text-align: left;
   h5 {
     text-align: center;
@@ -57,6 +77,9 @@ export default {
     line-height: 1.2;
     margin-bottom: 20PX;
   }
+  img{
+    margin-bottom: 20PX;
+  }
 }
 .mt-30{
   margin-top: 30PX;
@@ -66,24 +89,5 @@ export default {
 }
 .img-fullwidth{
   width: 100%;
-}
-blockquote {
-  position: relative;
-  padding: 0;
-  border-left: 2PX solid #0073aa;
-  padding-left: 0.7rem;
-  margin: 30PX 0 20px 0;
-  footer{
-    cite{
-      font-style: italic;
-    }
-    color: #888;
-    font-size: 0.27rem;
-  }
-  p {
-    color: #444;
-    font-size: 0.35rem;
-    line-height: 1.7;
-  }
 }
 </style>

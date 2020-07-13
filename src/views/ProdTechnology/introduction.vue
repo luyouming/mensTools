@@ -58,15 +58,54 @@ export default {
 }
 </style>
 <style scoped lang="scss">
+@media screen and (min-width:1200px){
+  .prod-info, .other{
+    width: 1000PX;
+    margin: auto;
+    img{
+      width: 40%;
+      height: 40%;
+    }
+  }
+  .prod-info{
+    padding: 20PX 2rem 0 2rem;
+  }
+  .other{
+    padding: 0 2rem;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .prod-info, .other{
+    width: 100%;
+    img{
+      width: 40%;
+      height: 40%;
+    }
+  }
+  .prod-info{
+    padding: 20PX 2rem 0 2rem;
+  }
+  .other{
+    padding: 0 2rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .prod-info, .other{
+    img{
+      width: 100%;
+    }
+  }
+  .prod-info{
+    padding: 20PX 1rem 0 1rem;
+  }
+  .other{
+    padding: 0 1rem;
+  }
+}
 .prod-info{
-  padding: 20PX 1rem;
   .prod-img{
     display: flex;
     justify-content: center;
-    img{
-      width: 50%;
-      height: 50%;
-    }
   }
   .prod-desc{
     box-sizing: border-box;
@@ -88,8 +127,8 @@ export default {
   margin-bottom: 10PX;
 }
 .other{
+  box-sizing: border-box;
   text-align: left;
-  padding: 0 1rem;
   margin-bottom: .5rem;
 }
 </style>
