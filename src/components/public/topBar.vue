@@ -194,11 +194,10 @@ export default {
           }
           .imgPic{
             position: absolute;
-            top: -44PX;
+            top: -25PX;
             left: 200px;
-            height: 190PX;
-            width: 220PX;
-
+            height: 120PX;
+            // width: 195PX;
           }
       }
     }
@@ -214,10 +213,7 @@ export default {
         .imgPic{
         position: absolute;
         left: 200px;
-        top: -45PX;
-        height: 200PX;
-        width: 220PX;
-
+        height: 120PX;
       }
       }
     }

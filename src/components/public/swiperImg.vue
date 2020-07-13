@@ -101,8 +101,7 @@ export default {
     cursor: pointer;
     .title{
       color: rgb(0, 195, 237);
-      font-size: 0.3rem;
-
+      font-size: .8rem;
       font-weight: 500;
       padding: 15px;
       font-family: "微软雅黑";
@@ -112,15 +111,13 @@ export default {
       animation: bottomEaseInAnimate 2s ease 1; /*调用动画：动画名、时间、时间线条、播放次数*/
     animation-fill-mode: forwards;/*定义动画结束的状态*/
       .year{
-       font-size: 0.3rem;
-
+       font-size: .8rem;
        font-weight: bold;
       }
     }
     .award{
       color: #fff;
-      font-size: 0.6rem;
-
+      font-size: .8rem;
       font-weight: 800;
       font-family: "微软雅黑";
       animation: topEaseInAnimate 2s ease 1; /*调用动画：动画名、时间、时间线条、播放次数*/
@@ -141,8 +138,7 @@ export default {
     align-items: center;
     .title{
       color: rgb(0, 195, 237);
-      font-size: 0.3rem;
-
+      font-size: .8rem;
       font-weight: 500;
       padding: 15px;
       font-family: "微软雅黑";
@@ -153,8 +149,7 @@ export default {
     }
     .award{
       color: #fff;
-      font-size: 0.6rem;
-
+      font-size: .8rem;
       font-weight: 800;
       font-family: "微软雅黑";
       animation: leftEaseInAnimate 2s ease 1; /*调用动画：动画名、时间、时间线条、播放次数*/

@@ -90,9 +90,9 @@ export default {
       color: #bbb;
       padding: 0 80px 90px 80px;
       .imgPic{
-        height: 190PX;
-        width: 220PX;
-        margin-bottom: -50PX;
+        width: 210PX;
+        height: 150PX;
+        margin-bottom:-30PX;
       }
       .paragraph{
         text-align: left;
