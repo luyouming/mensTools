@@ -33,8 +33,8 @@ const productList = [{
 },
 {
   id: '4',
-  name: "薄片传输",
-  desc:'薄片传输',
+  name: "临时键合",
+  desc:'临时键合',
   size: '200mm * 100mm',
   material: '硅胶纳米材料',
   technique: '工艺23432',
