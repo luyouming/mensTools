@@ -88,10 +88,11 @@ export default {
       justify-content: flex-start;
       align-items: flex-start;
       color: #bbb;
-      padding: 0 80px;
+      padding: 0 80px 90px 80px;
       .imgPic{
-        width: 210PX;
-        height: 112PX;
+        height: 190PX;
+        width: 220PX;
+        margin-bottom: -50PX;
       }
       .paragraph{
         text-align: left;

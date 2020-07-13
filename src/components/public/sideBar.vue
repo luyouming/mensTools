@@ -55,30 +55,30 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-width: 60px;
+  min-width: 80px;
   position: fixed;
   z-index: 999;
   top: calc(50% - 120px);
   right: 10px;
   div {
     width: 100%;
-    height: 60px;
+    height: 80px;
     border-bottom: 1px solid white;
     background: #6db0f9;
     // cursor: pointer;
     position: relative;
     .icon {
-      font-size: 40px;
+      font-size: 50px;
       color: #fff;
       font-weight: bold;
     }
     .qqImg {
-      width: 50px;
-      height: 50px;
+      width: 60px;
+      height: 60px;
     }
     .friendImg{
       height: 55px;
-      width: 60px;
+      width: 80px;
       margin-bottom: 10px;
     }
     .Box, .topBox {
@@ -86,7 +86,7 @@ export default {
       top: 0;
       right: 0;
       // width: 260px;
-      height: 60px;
+      height: 80px;
       // border: 1px solid red;
       display: flex;
       justify-content: center;
