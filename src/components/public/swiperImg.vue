@@ -62,7 +62,7 @@ export default {
           that.activeIndex = swiperHere.activeIndex
         },
         paginationClickable: true, // 点击切换
-        autoplay: 5000,
+        // autoplay: 5000,
         preventLinksPropagation: true,
         autoplayDisableOnInteraction: false
       });
@@ -91,9 +91,8 @@ export default {
   .back1 {
     position: absolute;
     z-index: 3;
-    top: 1rem;
-    left: 100px;
-    height: 300px;
+    top: .5rem;
+    left: 20PX;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -111,13 +110,14 @@ export default {
       animation: bottomEaseInAnimate 2s ease 1; /*调用动画：动画名、时间、时间线条、播放次数*/
     animation-fill-mode: forwards;/*定义动画结束的状态*/
       .year{
-       font-size: 0.9rem;
+       font-size: 0.8rem;
        font-weight: bold;
       }
     }
     .award{
+      text-align: left;
       color: #fff;
-      font-size: 1.8rem;
+      font-size: 1.6rem;
       font-weight: 800;
       font-family: "微软雅黑";
       animation: topEaseInAnimate 2s ease 1; /*调用动画：动画名、时间、时间线条、播放次数*/

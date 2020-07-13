@@ -38,11 +38,10 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.Apparea-all-container.DefaultContainerStyle{
+  display: block;
+}
 .Apparea-all-container{
- display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
  width: 100%;
  .content {
     width: 100%;
