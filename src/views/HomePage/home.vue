@@ -300,7 +300,7 @@ export default {
       width: 100%;
       padding: 0 130px;
       box-sizing: border-box;
-      margin: 60px 0 60px 0;
+      margin: 20PX 0 0 0;
     }
     .provideGoodPro {
       box-sizing: border-box;
@@ -316,31 +316,30 @@ export default {
       flex-direction: row;
       justify-content: space-around;
       align-items: center;
-      padding: 0 60px;
-      margin-bottom: 120px;
-      height: 500px;
-      background: url("~@/assets/CommonImg/HomePage/numberDance-bg.png")
-        no-repeat;
+      margin-bottom: 20PX;
+      height: 6rem;
+      background: url("~@/assets/CommonImg/HomePage/numberDance-bg.png") no-repeat;
       background-size: cover;
       .numberDance {
+        text-align: center;
         display: flex;
+        flex: 1;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         .imgPic {
-          width: 60px;
-          height: 60px;
+          width: 40PX;
+          height: 40PX;
         }
         .number {
           font-weight: 800;
           font-family: "Ping Fang SC";
-          font-size: 80px;
-          margin: 30px 0;
-          min-width: 280px;
+          font-size: .6rem;
+          margin: 10PX 0;
         }
         .name {
           font-family: "微软雅黑";
-          font-size: 30px;
+          font-size: .6rem;
           font-weight: 600;
         }
       }
@@ -364,7 +363,7 @@ export default {
           color: #00c3ed;
           bottom: 0;
           height: 50PX;
-          font-size: 20px;
+          font-size: 20PX;
           line-height: 50PX;
           width: 100%;
           font-weight: 700;
@@ -392,11 +391,11 @@ export default {
           .title {
             margin-bottom: 10px;
             color: #00c3ed;
-            font-size: 20px;
+            font-size: 20PX;
             font-weight: 700;
           }
           .desc {
-            font-size: 14px;
+            font-size: 14PX;
             line-height: 0.3rem;
             color: white;
           }
@@ -408,117 +407,12 @@ export default {
         }
       }
     }
-    // .mainProductTitle {
-    //   display: flex;
-    //   flex-direction: column;
-    //   justify-content: center;
-    //   align-items: center;
-    //   .name {
-    //     font-size: 78px;
-    //     color: #000;
-    //     font-weight: bold;
-    //     font-family: "黑体";
-    //     .keyWord {
-    //       color: #00c3ed;
-    //     }
-    //   }
-    //   .details {
-    //     margin: 40px 0 20px 0;
-    //     font-size: 28px;
-    //     color: #676767;
-    //     font-weight: 200;
-    //     line-height: 45px;
-    //     width: 60%;
-    //   }
-    //   .line {
-    //     height: 6px;
-    //     span {
-    //       display: inline-block;
-    //       width: 55px;
-    //       height: 100%;
-    //       background: #ddd;
-    //       border-radius: 20px;
-    //     }
-    //     .blue {
-    //       background: #00c3ed;
-    //     }
-    //   }
-    // }
-    // .mainProductBox {
-    //   width: 100%;
-    //   padding: 0 130px;
-    //   box-sizing: border-box;
-    //   margin: 0px 0 40px 0;
-    //   .mainProduct {
-    //     display: flex;
-    //     flex-direction: column;
-    //     flex-wrap: nowrap;
-    //     justify-content: center;
-    //     align-items: center;
-    //     width: 100%;
-    //     background: #fff;
-    //     color: #000;
-    //     margin-bottom: 80px;
-    //     position: relative;
-    //     height: 500px;
-    //     .imgPic {
-    //       width: 100%;
-    //       height: 100%;
-    //     }
-    //     .name {
-    //       position: absolute;
-    //       bottom: 0;
-    //       left: 0;
-    //       width: 100%;
-    //       height: 120px;
-    //       line-height: 120px;
-    //       font-size: 38px;
-    //       font-weight: bold;
-    //       font-family: "黑体";
-    //       background: rgba(0, 46, 90, 0.9);
-    //       color: #00c3ed;
-    //     }
-    //     .introduce {
-    //       position: absolute;
-    //       top: 0px;
-    //       left: 0;
-    //       width: 100%;
-    //       height: 100%;
-    //       border-radius: 8px;
-    //       background: rgba(0, 46, 90, 0.9);
-    //       padding: 180px 30px 0 30px;
-    //       box-sizing: border-box;
-    //       animation: topEaseInAnimate; /*动画名称*/
-    //       animation-duration: 0.3s; /*动画持续时间*/
-    //       -webkit-animation: topEaseInAnimate 0.3s; /*针对webkit内核*/
-    //       display: none;
-    //       .introduce_name {
-    //         font-size: 38px;
-    //         font-weight: bold;
-    //         font-family: "黑体";
-    //         color: #00c3ed;
-    //       }
-    //       .details {
-    //         font-size: 25px;
-    //         color: #efefef;
-    //         font-weight: 200;
-    //         line-height: 45px;
-    //       }
-    //     }
-    //   }
-    //   .mainProduct:hover .name {
-    //     display: none;
-    //   }
-    //   .mainProduct:hover .introduce {
-    //     display: block;
-    //   }
-    // }
     .ContactUs-main {
       width: 100%;
       display: flex;
-      padding: 0 130px;
+      padding: 0;
       box-sizing: border-box;
-      margin-bottom: 120px;
+      margin-bottom: 20PX;
       .main-title {
         text-align: left;
         user-select: none;
@@ -527,7 +421,6 @@ export default {
         cursor: default;
         color: white;
       }
-
       .main-left {
         width: 50%;
         background: url("~@/assets/CommonImg/ContactUs/bg88.jpg") no-repeat;
@@ -537,13 +430,13 @@ export default {
         user-select: none;
         cursor: default;
         color: white;
-        padding: 20px 0;
+        padding: 10PX 0;
         text-align: left;
-        line-height: 0.3rem;
-        font-size: 0.2rem;
+        line-height: 0.35rem;
+        font-size: 0.25rem;
       }
       .submit-main {
-        padding: 80px 30px 80px 30px !important;
+        padding: 0.5rem 0.2rem !important;
         background: url("~@/assets/CommonImg/ContactUs/worldmap.png") no-repeat;
         background-size: cover;
         background-position: center;
@@ -558,7 +451,7 @@ export default {
           background-color: rgba(255, 255, 255, 0);
           box-sizing: border-box;
           width: 100%;
-          padding: 10px;
+          padding: 10PX;
           line-height: 20px;
           font-size: 0.2rem;
           outline: none;

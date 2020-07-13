@@ -56,19 +56,22 @@ export default {
   justify-content: center;
   align-items: center;
   min-width: 80px;
+
   position: fixed;
   z-index: 999;
-  top: calc(50% - 120px);
-  right: 10px;
+  top: calc(50% - 160PX);
+  right: 5PX;
   div {
     width: 100%;
     height: 80px;
+
     border-bottom: 1px solid white;
     background: #6db0f9;
-    // cursor: pointer;
+    cursor: default;
     position: relative;
     .icon {
       font-size: 50px;
+
       color: #fff;
       font-weight: bold;
     }
@@ -80,6 +83,7 @@ export default {
       height: 55px;
       width: 80px;
       margin-bottom: 10px;
+
     }
     .Box, .topBox {
       position: absolute;
@@ -87,11 +91,11 @@ export default {
       right: 0;
       // width: 260px;
       height: 80px;
+
       // border: 1px solid red;
       display: flex;
       justify-content: center;
       align-items: center;
-      
       .number {
         color: white;
         font-size: 22PX;
@@ -103,8 +107,11 @@ export default {
     .topBox:hover{
      cursor: pointer;
     }
+    .Box{
+      transition: all .3s;
+    }
     .Box:hover{
-      width: 230px;
+      width: 230PX;
     }
     .Box:hover .number{
       display: block;

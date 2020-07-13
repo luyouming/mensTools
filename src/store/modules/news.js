@@ -15,8 +15,8 @@ const state = {
                 予437人“金鸡湖人才”称号，其中30名高层次领军人才、183名科技领军人才、29名科教领
                 军人才、6名高端服务业领军人才、189名高技能领军人才，我公司资深研究员冒薇博士有幸成   
                 为其中一员。</p>
-                <img style="margin: 20PX auto; display: block; max-width: 80%; max-height: 560PX" src="/static/news/金鸡湖人才证书.jpg" />
-                <img style="margin: 20PX auto; display: block; max-width: 80%; max-height: 560PX"" src="/static/news/科技领军人才合照.jpg" />
+                <img style="display: block; max-height: 560PX" src="/static/news/金鸡湖人才证书.jpg" />
+                <img style="display: block; max-height: 560PX"" src="/static/news/科技领军人才合照.jpg" />
             </div></div>`
         },
         {
@@ -91,10 +91,10 @@ const state = {
                 <div class="entry-content">
                 <p>苏州美图半导体技术有限公司于2016年3月15日~3月17日参加了一年一度备受瞩目的全国最大的半导体专业展览会 SEMICON China 2016！
                 在展会中，苏州美图半导 体技术有限公司向业界充分展示了在MEMS、先进封装、3D互联、生物芯片专用设备领域的技术创新。</p>
-                <img style="margin: 20PX auto; display: block; max-width: 80%; max-height: 560PX"  src="/static/news/展览1.jpg" />
-                <img style="margin: 20PX auto; display: block; max-width: 80%; max-height: 560PX" src="/static/news/展览2.jpg" />
+                <img style="display: block; max-height: 560PX"  src="/static/news/展览1.jpg" />
+                <img style="display: block; max-height: 560PX" src="/static/news/展览2.jpg" />
                 <p>展会期间，顾客络绎不绝！</p>
-                <img style="margin: 20PX auto; display: block; max-width: 80%; max-height: 560PX" src="/static/news/展览3.jpg" />
+                <img style="display: block; max-height: 560PX" src="/static/news/展览3.jpg" />
                 </div></div>`
         }
     ]

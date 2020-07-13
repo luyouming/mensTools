@@ -2,12 +2,12 @@
   <div class="ProdIntro-container">
     <titleBar :text="prodInfo.title"/>
     <el-row class="prod-info">
-      <el-col class="prod-img" :xs="24" :sm="24" :md="24" :lg="12" :xl="12"><img :src="prodInfo.src" alt=""></el-col>
-      <el-col class="prod-desc" :xs="24" :sm="24" :md="24" :lg="12" :xl="12">
-        <div class="title">{{ prodInfo.title }}</div>
+      <el-col class="prod-desc" :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
+        <!-- <div class="title">{{ prodInfo.title }}</div> -->
         <div class="defaultFont summary">
           {{ prodInfo.summary }}
         </div>
+      <el-col class="prod-img" :xs="24" :sm="24" :md="24" :lg="24" :xl="24"><img :src="prodInfo.src" alt=""></el-col>
       </el-col>
     </el-row>
     <div v-if="prodInfo.principle" class="other defaultFont" v-html="prodInfo.principle" />
@@ -58,18 +58,58 @@ export default {
 }
 </style>
 <style scoped lang="scss">
-.prod-info{
-  padding: 0.5rem 1rem 0 1rem;
-  .prod-img{
-    padding-right: 1rem;
+@media screen and (min-width:1200px){
+  .prod-info, .other{
+    width: 1000PX;
+    margin: auto;
+    img{
+      width: 40%;
+      height: 40%;
+    }
+  }
+  .prod-info{
+    padding: 20PX 2rem 0 2rem;
+  }
+  .other{
+    padding: 0 2rem;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .prod-info, .other{
+    width: 100%;
+    img{
+      width: 40%;
+      height: 40%;
+    }
+  }
+  .prod-info{
+    padding: 20PX 2rem 0 2rem;
+  }
+  .other{
+    padding: 0 2rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .prod-info, .other{
     img{
       width: 100%;
     }
   }
+  .prod-info{
+    padding: 20PX 1rem 0 1rem;
+  }
+  .other{
+    padding: 0 1rem;
+  }
+}
+.prod-info{
+  .prod-img{
+    display: flex;
+    justify-content: center;
+  }
   .prod-desc{
     box-sizing: border-box;
     text-align: left;
-    padding: 1rem 0 0 0;
     .title{
       font-size: 0.55rem;
       font-weight: 800;
@@ -87,8 +127,8 @@ export default {
   margin-bottom: 10PX;
 }
 .other{
+  box-sizing: border-box;
   text-align: left;
-  padding: 0 1rem;
   margin-bottom: .5rem;
 }
 </style>

@@ -185,7 +185,7 @@ export default {
     }
     @media screen and (max-width: 1200px) {
       .TopBar-container {
-        padding-top: 52PX;
+        padding-top: 22PX;
           .nav-centent-phone{
             display: block;
           }
@@ -198,6 +198,7 @@ export default {
             left: 200px;
             height: 190PX;
             width: 220PX;
+
           }
       }
     }
@@ -216,6 +217,7 @@ export default {
         top: -45PX;
         height: 200PX;
         width: 220PX;
+
       }
       }
     }

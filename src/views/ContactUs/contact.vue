@@ -83,13 +83,10 @@ export default {
 
 <style scoped lang="scss">
 .ContactUs-container{
-  min-height: 10vh;
   .ContactUs-main {
       width: 100%;
-      padding: 0 130px;
       box-sizing:border-box;
-      margin: 120px 0;
-      
+      margin: 20PX 0;
       .main-title {
         text-align: left;
         user-select: none;
@@ -100,7 +97,7 @@ export default {
       }
       .main-left {
         width: 100%;
-        height: 360PX;
+        height: 400PX;
         background: url("~@/assets/CommonImg/ContactUs/bg88.jpg") no-repeat;
         background-size: cover;
       }
@@ -114,7 +111,7 @@ export default {
         font-size: 0.25rem;
       }
       .submit-main {
-        height: 360PX;
+        height: 400PX;
         padding: 0.5rem 0.2rem !important;
         background: url("~@/assets/CommonImg/ContactUs/worldmap.png") no-repeat;
         background-size: cover;
