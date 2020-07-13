@@ -51,7 +51,7 @@ export default {
       width: 100%;
       padding: 0 130px;
       box-sizing: border-box;
-      margin: 60px 0;
+      margin: 80px 0 160px 0;
     }
  }
 }

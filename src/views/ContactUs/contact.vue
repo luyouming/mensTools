@@ -86,7 +86,7 @@ export default {
   .ContactUs-main {
       width: 100%;
       box-sizing:border-box;
-      margin: 20PX 0;
+      margin: 80px 0 160px 0;
       .main-title {
         text-align: left;
         user-select: none;
