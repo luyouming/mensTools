@@ -62,7 +62,7 @@ export default {
           that.activeIndex = swiperHere.activeIndex
         },
         paginationClickable: true, // 点击切换
-        // autoplay: 5000,
+        autoplay: 5000,
         preventLinksPropagation: true,
         autoplayDisableOnInteraction: false
       });
@@ -202,6 +202,30 @@ export default {
     }
   }
 }
+// 移动端
+    @media screen and (max-width: 1200px) {
+      .swiper-Box {
+        height: 400PX;
+        .swiper-container {
+          height: 400PX;
+          .swiper-wrapper {
+           height: 400PX;
+          }  
+        }
+      }
+    }
+    // and (max-width:2400px)  pc端 这里不需要上限
+    @media screen and (min-width:1200px){
+      .swiper-Box {
+        height: 600PX;
+        .swiper-container {
+          height: 600PX;
+          .swiper-wrapper {
+           height: 600PX;
+          }  
+        }
+      }
+    }
  @keyframes rightEaseInAnimate{/*定义从右边滑入文字的动画*/
     0%{transform: translateX(400px);opacity: 0;}
     100%{transform:translateX(0px);opacity: 1; }

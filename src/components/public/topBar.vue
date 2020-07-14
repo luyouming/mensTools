@@ -183,6 +183,7 @@ export default {
     .navCententPhoneOpen {
         margin-bottom: 15PX;
     }
+    // 移动端
     @media screen and (max-width: 1200px) {
       .TopBar-container {
         padding-top: 22PX;
@@ -201,7 +202,7 @@ export default {
           }
       }
     }
-    // and (max-width:2400px)  这里不需要上限
+    // and (max-width:2400px)  pc端 这里不需要上限
     @media screen and (min-width:1200px){
       .TopBar-container {
         .nav-centent-phone{
