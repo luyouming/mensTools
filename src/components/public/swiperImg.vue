@@ -205,13 +205,24 @@ export default {
 // 移动端
     @media screen and (max-width: 1200px) {
       .swiper-Box {
-        height: 400PX;
+        height: 300PX;
         .swiper-container {
-          height: 400PX;
+          height: 300PX;
           .swiper-wrapper {
-           height: 400PX;
+           height: 300PX;
           }  
         }
+        .back2, .back1{
+          .title{
+            font-size: 0.8rem;
+            .year{
+            font-size: 0.8rem;
+          }
+          }
+            .award{
+              font-size: 1.0rem;
+            }
+          }
       }
     }
     // and (max-width:2400px)  pc端 这里不需要上限

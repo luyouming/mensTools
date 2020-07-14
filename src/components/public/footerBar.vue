@@ -217,6 +217,7 @@ export default {
     }
   }
 }
+// 移动端
 @media screen and (max-width: 1200px) {
       .footer-container {
         .footerInfo{
@@ -226,6 +227,9 @@ export default {
           align-items: center;
           .footerBox{
             width: 80%;
+            .newsBox > .news > .title{
+              font-size: 14PX;
+            }
           }
         }
         // .newsBox{

@@ -67,4 +67,17 @@ export default {
    }
  }
 }
+// 移动端
+    @media screen and (max-width: 1200px) {
+      .AboutUs-container{
+        .content {
+         .provideGoodPro{
+           img{
+             width: 100%;
+             height: 6rem;
+           }
+         }
+        }
+      }
+    }
 </style>

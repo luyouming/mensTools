@@ -169,4 +169,38 @@ export default {
       }
     }
 }
+
+// 移动端
+    @media screen and (max-width: 1200px) {
+      .ContactUs-container{
+        .ContactUs-main{
+          .main-title{
+            font-size: 0.8rem;
+          }
+          .main-left{
+            height: 4rem;
+          }
+          .main-desc {
+            font-size:  0.4rem; 
+            line-height: 0.45rem;
+          }
+          .submit-main{
+              input,
+              textarea{
+                font-size:  0.4rem;
+                line-height: 0.5rem;
+              }
+              textarea{
+                height: 4rem;
+              }
+              button{
+                font-size:  0.4rem;
+                height: 2.5rem;
+                line-height: 0.5rem;
+                width: 3rem;
+              }
+          }
+        }
+      }
+    }
 </style>

@@ -58,7 +58,7 @@ export default {
 </script>
 <style scoped lang="scss">
 .main-page {
-  min-height: 60vh;
+  // min-height: 60vh;
 }
 .topBarIsFixed {
   position: fixed;

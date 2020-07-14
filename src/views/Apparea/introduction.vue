@@ -104,4 +104,25 @@ export default {
     }
   }
 }
+// 移动端
+    @media screen and (max-width: 1200px) {
+      .Apparea-intro-container{
+        .contentBox {
+          img{
+            width:100%;
+            height:5rem;
+          }
+          .news{
+            // width: calc(100% - 5rem);
+            width: 100%;
+            .content{
+            font-size: 18PX;
+            line-height: 26PX;
+            text-indent: 0px;
+            }
+          }
+          
+        }
+      }
+    }
 </style>
