@@ -69,19 +69,19 @@ export default {
   width: 100%;
   .contentBox {
     width: 100%;
-    padding: 0 130px;
+    height:350PX;
+    padding: 0 130px 60PX 130px;
     box-sizing: border-box;
-    margin: 60px auto;
-    cursor: pointer;
+    margin: 60PX auto;
     img {
       float: left;
-      width: 480px;
-      height: 360px;
-      border-radius: 2px;
+      width: 8rem;
+      height: 280PX;
+      border-radius: 2PX;
     }
     .news {
       float: left;
-      width: calc(100% - 480px);
+      width: calc(100% - 8rem);
       padding: 0 20px;
       height: 90px;
       line-height: 90px;
@@ -89,23 +89,26 @@ export default {
       box-sizing: border-box;
       .title {
         font-weight: 500;
-        font-size: 18px;
+        font-size: 25PX;
         font-family: "微软雅黑";
-        line-height: 28px;
+        line-height: 28PX;
         color: #ccc;
       }
       .content {
         color: #666;
         font-family: "微软雅黑";
         font-weight: 500;
-        font-size: 30px;
-        text-indent: 100px;
+        line-height: 70PX;
+        font-size: 0.4rem;
+        text-indent: 100PX;
+    min-width: 9rem;
+
       }
     }
   }
 }
 // 移动端
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 750px) {
       .Apparea-intro-container{
         .contentBox {
           img{
@@ -117,7 +120,7 @@ export default {
             width: 100%;
             .content{
             font-size: 18PX;
-            line-height: 26PX;
+            line-height: 30PX;
             text-indent: 0px;
             }
           }

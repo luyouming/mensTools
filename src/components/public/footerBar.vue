@@ -12,7 +12,7 @@
         <div><span class="left"></span><span class="right"></span></div>
       </div>
       <div class="newsBox" @click="gotoNews(item)" v-for="(item, index) in footerNews" :key="item + index">
-        <img :src="require(`$assets/CommonImg/${item.imgUrl}`)" alt="">
+        <img :src="item.src" alt="">
         <div class="news">
           <p class="title">{{item.title}}</p>
           <p class="content">{{item.time}}</p>
@@ -53,6 +53,9 @@ export default {
                          {name: '邮箱', contactWay: 'info@memstools.cn'},
                          {name: '地址', contactWay: '江苏省苏州市工业园区星湖街218号生物纳米园A7-506'},]
     }
+  },
+  mounted() {
+    console.log(commonInfo.latestNews)
   },
   methods: {
     gotoNews(info){
