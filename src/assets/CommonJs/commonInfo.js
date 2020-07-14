@@ -8,7 +8,7 @@ const productList = [{
   technique: '工艺23432',
   iconUrl: `product1.png`,
   imgUrl: `appArea1.jpg`,
-  discription: "产品描述产产品描述产产品描述产品描述产品描述产品描述产品描述产品描述"
+  discription: " "
 },
 {
   id: '2',
@@ -19,7 +19,7 @@ const productList = [{
   technique: '工艺23432',
   iconUrl: `product2.png`,
   imgUrl: `appArea2.jpg`,
-  discription: "产品描述产产品描述产产品描述产品描述产品描述产品描述产品描述产品描述"
+  discription: " "
 },
 {
   id: '3',
@@ -30,7 +30,7 @@ const productList = [{
   technique: '工艺23432',
   iconUrl: `product3.png`,
   imgUrl: `appArea3.jpg`,
-  discription: "产品描述产产品描述产产品描述产品描述产品描述产品描述产品描述产品描述"
+  discription: ""
 },
 {
   id: '4',
@@ -41,7 +41,7 @@ const productList = [{
   technique: '工艺23432',
   iconUrl: `product4.png`,
   imgUrl: `appArea4.jpg`,
-  discription: "产品描述产产品描述产产品描述产品描述产品描述产品描述产品描述产品描述"
+  discription: ""
 }
 ]
 const latestNews = [
