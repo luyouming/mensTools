@@ -1,3 +1,4 @@
+import config from "@/config/index";
 const productList = [{
   id: '1',
   name: "生物芯片",
@@ -63,7 +64,12 @@ const latestNews = [
     desc: '苏州美图半导体技术有限公司被授予“高新技术企业”荣誉证书，大大提高了我公司参与各项招投标业务的竞争力，同时也进一步提升了我公司的....'
   }
 ]
+const swiperImgs =[
+  { id: "1", src: `${config.swiperImgUrl}first.png` },
+  { id: "2", src: `${config.swiperImgUrl}second.png` }
+]
 export default {
   productList,
-  latestNews
+  latestNews,
+  swiperImgs
 }

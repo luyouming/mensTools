@@ -15,7 +15,7 @@ const apiUrl = {
   // 生成外网接口请求地址 npm run build:pro
   pro: 'http://clouddeer.com/pro/api/V1/'
 }
-const swiperImgUrl = 'http://219.142.71.84/app/img/'
+const swiperImgUrl = 'http://www.clouddeer-expo.com/ZGP_img/'
 
 module.exports = {
   publicPath,

@@ -159,10 +159,7 @@ export default {
         prefix: "",
         suffix: ""
       },
-      imgArr: [
-        { id: "1", src: `${config.swiperImgUrl}first.png` },
-        { id: "2", src: `${config.swiperImgUrl}second.jpg` }
-      ],
+      imgArr: commonInfo.swiperImgs,
       numberDanceList: [
         { name: "成立", iconUrl: `smile.png`, num: 2012 },
         { name: "合作客户", iconUrl: `rocket.png`, num: 1010 },
