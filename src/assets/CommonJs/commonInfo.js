@@ -2,8 +2,8 @@ import config from "@/config/index";
 // 首页应用领域的相关数据
 const productList = [{
   id: '1',
-  name: "生物芯片",
-  desc:'生物芯片专用设备',
+  name: "MEMS",
+  desc:'MEMS器件制造',
   size: '200mm * 100mm',
   material: '硅胶纳米材料',
   technique: '工艺23432',
@@ -24,8 +24,8 @@ const productList = [{
 },
 {
   id: '3',
-  name: "MEMS",
-  desc:'MEMS器件制造',
+  name: "临时键合",
+  desc:'临时键合',
   size: '200mm * 100mm',
   material: '硅胶纳米材料',
   technique: '工艺23432',
@@ -35,8 +35,8 @@ const productList = [{
 },
 {
   id: '4',
-  name: "临时键合",
-  desc:'临时键合',
+  name: "生物芯片",
+  desc:'生物芯片专用设备',
   size: '200mm * 100mm',
   material: '硅胶纳米材料',
   technique: '工艺23432',
