@@ -1,6 +1,6 @@
 <template>
   <div class="ProdIntro-container">
-    <titleBar :text="prodInfo.title"/>
+    <titleBar :text="prodInfo.title" backBtn prodCase :id="prodInfo.id" />
     <el-row class="prod-info">
       <el-col class="prod-desc" :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
         <!-- <div class="title">{{ prodInfo.title }}</div> -->

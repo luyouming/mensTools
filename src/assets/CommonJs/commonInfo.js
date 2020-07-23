@@ -293,6 +293,81 @@ const prodList= [
       <br>3、干膜贴膜，电镀贴膜，键合干膜等`
   }
 ]
+// 产品案例的内容 (id要与产品列表里的一致)
+const prodCaseList = [
+    {
+        id: '1',
+        title: '阳极键合',
+        topLeftImg: require('$assets/CommonImg/ProdList/阳极键合.png'),
+        bottomRightImg: require('$assets/CommonImg/ProdList/阳极键合.png'),
+        topRightText: '阳极键合技术也称为场辅助密封、静电键合。它可以将玻璃与金属、合金或半导体键合在一起而不用任何粘结剂。',
+        bottomLeftText: '阳极键合技术也称为场辅助密封、静电键合。它可以将玻璃与金属、合金或半导体键合在一起而不用任何粘结剂。',
+    },
+    {
+        id: '2',
+        title: '解键合',
+        topLeftImg: require('$assets/CommonImg/ProdList/解键合.png'),
+        bottomRightImg: require('$assets/CommonImg/ProdList/解键合.png'),
+        topRightText: '工艺完成以后，需将器件晶圆与载片分离。减薄后的器件晶圆会由其他器件晶圆(晶圆级键合，永久键合至另一个晶圆上)或胶膜(芯片-品圆键合时黏附在划片使用的支撑胶膜上)支撑。以提供足够的应力支撑。根据临时键合层或释放层的特性，目前已研发出了多种解键合技术。',
+        bottomLeftText: '工艺完成以后，需将器件晶圆与载片分离。减薄后的器件晶圆会由其他器件晶圆(晶圆级键合，永久键合至另一个晶圆上)或胶膜(芯片-品圆键合时黏附在划片使用的支撑胶膜上)支撑。以提供足够的应力支撑。根据临时键合层或释放层的特性，目前已研发出了多种解键合技术。',
+    },
+    {
+        id: '3',
+        title: '键合对准',
+        topLeftImg: require('$assets/CommonImg/ProdList/键合对准.png'),
+        bottomRightImg: require('$assets/CommonImg/ProdList/键合对准.png'),
+        topRightText: `晶圆键合对准机是把一片晶圆与另一片晶圆进行对准。利用上下两片晶圆的对准标记，通过光学视觉系统，实现上下两片晶圆的光学对准，随后通过机械的方法，使两片晶圆接触，完成对准。`,
+        bottomLeftText: `晶圆键合对准机是把一片晶圆与另一片晶圆进行对准。利用上下两片晶圆的对准标记，通过光学视觉系统，实现上下两片晶圆的光学对准，随后通过机械的方法，使两片晶圆接触，完成对准。`,
+    },
+    {
+        id: '4',
+        title: '晶圆喷胶机',
+        topLeftImg: require('$assets/CommonImg/ProdList/喷胶机.png'),
+        bottomRightImg: require('$assets/CommonImg/ProdList/喷胶机.png'),
+        topRightText: `晶圆喷胶机是一种能够覆盖崎岖形貌的光刻胶涂覆设备，同时对厚胶涂覆和节省光刻胶方面有着非常明显的优势。雾化喷头将光刻胶雾化成雾滴，溅到衬底或晶圆表面，热板加热将光刻胶溶剂蒸发，使得有用的树脂留在衬底或晶圆表面，形成相对均匀的光刻胶覆盖。雾化喷头在衬底或晶圆上方做S形运动，以保证每一处被均匀的被覆盖。当雾化喷头经过若干次S形扫描后，衬底表面就会形成均匀的光刻胶覆盖。`,
+        bottomLeftText: `晶圆喷胶机是一种能够覆盖崎岖形貌的光刻胶涂覆设备，同时对厚胶涂覆和节省光刻胶方面有着非常明显的优势。雾化喷头将光刻胶雾化成雾滴，溅到衬底或晶圆表面，热板加热将光刻胶溶剂蒸发，使得有用的树脂留在衬底或晶圆表面，形成相对均匀的光刻胶覆盖。雾化喷头在衬底或晶圆上方做S形运动，以保证每一处被均匀的被覆盖。当雾化喷头经过若干次S形扫描后，衬底表面就会形成均匀的光刻胶覆盖。`,
+    },
+    {
+        id: '5',
+        title: '紫外光刻机',
+        topLeftImg: require('$assets/CommonImg/ProdList/紫外光刻机.png'),
+        bottomRightImg: require('$assets/CommonImg/ProdList/紫外光刻机.png'),
+        topRightText: '光刻机(Mask Aligner) 又名掩模对准曝光机，曝光系统，光刻系统等。常用的光刻机是掩膜对准光刻，所以叫 Mask Alignment System.一般的光刻工艺要经历硅片表面清洗烘干、涂底、旋涂光刻胶、软烘、对准曝光、后烘、显影、硬烘、刻蚀等工序。Photolithography(光刻) 意思是用光来制作一个图形(工艺);在硅片表面匀胶，然后将掩模版上的图形转移光刻胶上的过程将器件或电路结构临时"复制"到硅片上的过程。',
+        bottomLeftText: '光刻机(Mask Aligner) 又名掩模对准曝光机，曝光系统，光刻系统等。常用的光刻机是掩膜对准光刻，所以叫 Mask Alignment System.一般的光刻工艺要经历硅片表面清洗烘干、涂底、旋涂光刻胶、软烘、对准曝光、后烘、显影、硬烘、刻蚀等工序。Photolithography(光刻) 意思是用光来制作一个图形(工艺);在硅片表面匀胶，然后将掩模版上的图形转移光刻胶上的过程将器件或电路结构临时"复制"到硅片上的过程。',
+    },
+    {
+        id: '6',
+        title: '桌面显影机',
+        topLeftImg: require('$assets/CommonImg/ProdList/桌面式显影机.png'),
+        bottomRightImg: require('$assets/CommonImg/ProdList/桌面式显影机.png'),
+        topRightText: '显影机是将晒制好的印版通过半自动和全自动的程序将显影、冲洗、涂胶、烘干等工序一次性部分或全部完成的印刷处理设备。一般由传动系统、显影系统、冲洗系统、烘干系统、程序控制系统等部分组成。',
+        bottomLeftText: '显影机是将晒制好的印版通过半自动和全自动的程序将显影、冲洗、涂胶、烘干等工序一次性部分或全部完成的印刷处理设备。一般由传动系统、显影系统、冲洗系统、烘干系统、程序控制系统等部分组成。',
+    },
+    {
+        id: '7',
+        title: '匀胶机',
+        topLeftImg: require('$assets/CommonImg/ProdList/匀胶机.png'),
+        bottomRightImg: require('$assets/CommonImg/ProdList/匀胶机.png'),
+        topRightText: '匀胶机是在高速旋转的基片上，滴注各类胶液，利用离心力使滴在基片上的胶液均匀地涂覆在基片上的设备，膜的厚度取决于匀胶机的转速和溶胶的黏度。',
+        bottomLeftText: '匀胶机是在高速旋转的基片上，滴注各类胶液，利用离心力使滴在基片上的胶液均匀地涂覆在基片上的设备，膜的厚度取决于匀胶机的转速和溶胶的黏度。',
+    },
+    {
+        id: '8',
+        title: '热板',
+        topLeftImg: require('$assets/CommonImg/ProdList/热板.png'),
+        bottomRightImg: require('$assets/CommonImg/ProdList/热板.png'),
+        topRightText: '可编程存储多达20个程序，每个程序可设阶梯温度值30个阶段，单个阶段定时最长可达10小时（600分钟）',
+        bottomLeftText: '可编程存储多达20个程序，每个程序可设阶梯温度值30个阶段，单个阶段定时最长可达10小时（600分钟）',
+    },
+    {
+        id: '9',
+        title: '贴膜机',
+        topLeftImg: require('$assets/CommonImg/ProdList/贴膜机.png'),
+        bottomRightImg: require('$assets/CommonImg/ProdList/贴膜机.png'),
+        topRightText: '贴膜机是专门用于电子/通讯/半导体等行业贴保护膜及防暴膜的机器，可确保无气泡无擦痕贴膜。',
+        bottomLeftText: '贴膜机是专门用于电子/通讯/半导体等行业贴保护膜及防暴膜的机器，可确保无气泡无擦痕贴膜。',
+    }
+  ]
 // 所有的新闻数据
 const allNewsList= [
   {
@@ -405,6 +480,7 @@ const swiperImgs =[
 ]
 export default {
   productList,
+  prodCaseList,
   prodList,
   allNewsList,
   latestNews,

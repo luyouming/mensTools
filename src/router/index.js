@@ -58,6 +58,10 @@ export default new Router({
           path: '/prod/introduction/:id',
           name: 'prodIntroduction',
           component: () => import('@/views/ProdTechnology/introduction.vue'),
+        },{
+          path: '/prod/case/:id',
+          name: 'case',
+          component: () => import('@/views/ProdTechnology/case.vue'),
         }
       ]
     },
