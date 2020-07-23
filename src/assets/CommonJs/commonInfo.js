@@ -397,8 +397,11 @@ const allNewsList= [
 const latestNews = allNewsList && allNewsList.length > 1 ? allNewsList.slice(0, 2) : []
 // 首页轮播图的图片
 const swiperImgs =[
-  { id: "1", src: `${config.swiperImgUrl}first.png` },
-  { id: "2", src: `${config.swiperImgUrl}second.png` }
+//   { id: "1", src: `${config.swiperImgUrl}first.png` },
+//   { id: "2", src: `${config.swiperImgUrl}second.png` }
+  { id: "1", src: require(`$assets/CommonImg/SwiperImg/swiper-first.jpg`) },
+  { id: "2", src: require(`$assets/CommonImg/SwiperImg/swiper-second.jpg`) }
+//   { id: "3", src: require(`$assets/CommonImg/SwiperImg/swiper-third.jpg`) }
 ]
 export default {
   productList,

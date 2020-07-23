@@ -86,12 +86,13 @@ export default {
 <style lang="scss" >
 .swiper-Box {
   width: 100%;
-  height: 600PX;
+  // height: 600PX;
+  height:auto;
   position: relative;
   .back1 {
     position: absolute;
     z-index: 3;
-    top: .5rem;
+    top: .75rem;
     left: 20PX;
     display: flex;
     flex-direction: column;
@@ -160,15 +161,19 @@ export default {
   /* 以下是swiper的轮播图 */
   .swiper-container {
     width: 100%;
-    height: 600PX;
+    // height: 600PX;
+    height:auto;
     display: block;
 
     .swiper-slide img {
       width: 100%;
-      height: 100%;
+      // height: 100%;
+      height:auto;
+      min-height:500PX;
     }
     .swiper-wrapper {
-      height: 600PX;
+      // height: 600PX;
+      height:auto;
     }
     .swiper-slide {
       text-align: center;
