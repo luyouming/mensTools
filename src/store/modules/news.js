@@ -1,7 +1,7 @@
-import allNewsList from '@/assets/CommonJs/commonInfo'
+import commonInfo from '@/assets/CommonJs/commonInfo'
 const state = {
     newsInfo: {},
-    newsList: allNewsList
+    newsList: commonInfo.allNewsList
 }
 const mutations = {
 }
