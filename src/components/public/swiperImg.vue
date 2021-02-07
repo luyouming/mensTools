@@ -87,19 +87,19 @@ export default {
 .swiper-Box {
   width: 100%;
   // height: 600PX;
-  height:auto;
+  height: auto;
   position: relative;
   .back1 {
     position: absolute;
     z-index: 3;
-    top: .75rem;
-    left: 20PX;
+    top: 1.8rem;
+    left: 0.8rem;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: flex-start;
     cursor: pointer;
-    .title{
+    .title {
       color: rgb(0, 195, 237);
       font-size: 0.9rem;
       font-weight: 500;
