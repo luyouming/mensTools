@@ -2,14 +2,14 @@
   <div class="swiper-Box">
     <!-- v-show="activeIndex === 2" -->
     <div class="back1" @click="gotoNews(0)" v-show="activeIndex !== 2">
-      <p class="title"><span class="year">2012</span>公司员工荣称</p>
+      <p class="title"><span class="year">2012</span>公司荣称</p>
       <p class="award">苏州工业园区科技</p>
       <p class="award">领军人才</p>
     </div>
     <div class="back2" @click="gotoNews(1)" v-show="activeIndex === 2">
       <div>
-      <p class="title">国家重点支持</p>
-      <p class="award">高新技术企业</p>
+        <p class="title">国家重点支持</p>
+        <p class="award">高新技术企业</p>
       </div>
     </div>
     <div class="swiper-container">
@@ -36,15 +36,15 @@ export default {
       default: () => [
         { id: "1", src: `${config.swiperImgUrl}first.png` },
         { id: "2", src: `${config.swiperImgUrl}second.jpg` },
-        { id: "3", src: `${config.swiperImgUrl}third.jpg` }
-      ]
-    }
+        { id: "3", src: `${config.swiperImgUrl}third.jpg` },
+      ],
+    },
   },
   data() {
     return {
       msg: "hello，轮播图",
       activeIndex: 0,
-      newsInfo: commonInfo.latestNews
+      newsInfo: commonInfo.latestNews,
     };
   },
   mounted() {
@@ -53,33 +53,33 @@ export default {
   },
   methods: {
     initSwiper() {
-      var that = this
+      var that = this;
       var mySwiper = new Swiper(".swiper-container", {
         loop: true,
         pagination: ".swiper-pagination",
-        onSlideChangeEnd: function(swiperHere) {
+        onSlideChangeEnd: function (swiperHere) {
           // console.log(swiperHere.activeIndex);
-          that.activeIndex = swiperHere.activeIndex
+          that.activeIndex = swiperHere.activeIndex;
         },
         paginationClickable: true, // 点击切换
         autoplay: 5000,
         preventLinksPropagation: true,
-        autoplayDisableOnInteraction: false
+        autoplayDisableOnInteraction: false,
       });
       if (mySwiper) {
         this.msg = "初始化轮播图成功";
       }
     },
-    gotoNews(index){
-      if(!this.newsInfo || !this.newsInfo[index]) {
-        console.log('没有这条新闻')
+    gotoNews(index) {
+      if (!this.newsInfo || !this.newsInfo[index]) {
+        console.log("没有这条新闻");
       }
-      this.$router.push('/news/details/' + this.newsInfo[index].id)
+      this.$router.push("/news/details/" + this.newsInfo[index].id);
       setTimeout(() => {
-        document.documentElement.scrollTop = 0
-      }, 100)
-    }
-  }
+        document.documentElement.scrollTop = 0;
+      }, 100);
+    },
+  },
 };
 </script>
 
@@ -109,20 +109,20 @@ export default {
       border-top: 3px solid rgb(0, 195, 237);
       background: #333;
       animation: bottomEaseInAnimate 2s ease 1; /*调用动画：动画名、时间、时间线条、播放次数*/
-    animation-fill-mode: forwards;/*定义动画结束的状态*/
-      .year{
-       font-size: 0.8rem;
-       font-weight: bold;
+      animation-fill-mode: forwards; /*定义动画结束的状态*/
+      .year {
+        font-size: 0.8rem;
+        font-weight: bold;
       }
     }
-    .award{
+    .award {
       text-align: left;
       color: #fff;
       font-size: 1.6rem;
       font-weight: 800;
       font-family: "微软雅黑";
       animation: topEaseInAnimate 2s ease 1; /*调用动画：动画名、时间、时间线条、播放次数*/
-    animation-fill-mode: forwards;/*定义动画结束的状态*/
+      animation-fill-mode: forwards; /*定义动画结束的状态*/
     }
   }
   .back2 {
