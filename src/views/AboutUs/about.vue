@@ -1,16 +1,24 @@
 <template>
   <div class="AboutUs-container DefaultContainerStyle">
     <title-bar text="关于我们" />
-     <!-- 产品海报图 -->
+    <!-- 产品海报图 -->
     <div class="content">
       <div class="provideGoodPro">
-      <img :src="require(`$assets/CommonImg/HomePage/provideGoodPro.jpg`)" alt="">
+        <img
+          :src="require(`$assets/CommonImg/HomePage/provideGoodPro.jpg`)"
+          alt=""
+        />
+        <div class="cover"></div>
       </div>
     </div>
     <!-- 友情链接 -->
     <div class="friendLink" v-if="false">
       <span>友情链接:</span>
-      <img @click="gotoFriendNet" :src="require(`$assets/CommonImg/AboutUs/friendLink.png`)" alt="">
+      <img
+        @click="gotoFriendNet"
+        :src="require(`$assets/CommonImg/AboutUs/friendLink.png`)"
+        alt=""
+      />
     </div>
   </div>
 </template>
@@ -22,62 +30,80 @@ export default {
   components: { titleBar },
   methods: {
     gotoFriendNet() {
-      window.location.href = 'http://www.baidu.com'
-    }
-  }
+      window.location.href = "http://www.baidu.com";
+    },
+  },
 };
 </script>
 
 <style scoped lang="scss">
 .AboutUs-container {
-   display: flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
- width: 100%;
- .content {
+  width: 100%;
+  .content {
     width: 100%;
-    .provideGoodPro{
+    .provideGoodPro {
       box-sizing: border-box;
       padding: 0 130px;
       margin: 120px 0;
-      img{
+      position: relative;
+      img {
         width: 100%;
         height: 100%;
       }
+      .cover {
+        width: 48%;
+        height: 40%;
+        // border: 1px solid red;
+        position: absolute;
+        bottom: 0;
+        right: 130px;
+        background-color: #fff;
+      }
     }
- }
- .friendLink{
-   width: 100%;
-   height: 500px;
-   background:#0B2F57;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   span{
-    //  display: inline-block;
-    font-size: 36px;
-    padding-top: 60px;
-    color: #ccc;
-   }
-   img{
-     cursor: pointer;
-     height: 260px;
-     width: 350px;
-   }
- }
+  }
+  .friendLink {
+    width: 100%;
+    height: 500px;
+    background: #0b2f57;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    span {
+      //  display: inline-block;
+      font-size: 36px;
+      padding-top: 60px;
+      color: #ccc;
+    }
+    img {
+      cursor: pointer;
+      height: 260px;
+      width: 350px;
+    }
+  }
 }
 // 移动端
-    @media screen and (max-width: 1200px) {
-      .AboutUs-container{
-        .content {
-         .provideGoodPro{
-           img{
-             width: 100%;
-             height: 6rem;
-           }
-         }
+@media screen and (max-width: 1200px) {
+  .AboutUs-container {
+    .content {
+      .provideGoodPro {
+        img {
+          width: 100%;
+          height: 6rem;
+        }
+        .cover {
+          width: 45.8%;
+          height: 40%;
+          border: 1px solid red;
+          position: absolute;
+          bottom: 0;
+          right: 120px;
         }
       }
     }
+  }
+}
 </style>
