@@ -1,10 +1,10 @@
 <template>
   <div @click="gotoAppArea(productInfo)" class="productDiscribe-container borderAnimation" :class="isEven ? 'borderAnimation-even' : ''">
     <img class="iconPic" :src="require(`$static/icon/${productInfo.iconUrl}`)" alt />
-    <h5 class="name">{{productInfo.name}}</h5>
+    <!-- <h5 class="name">{{productInfo.name}}</h5> -->
     <div class="discribe">{{productInfo.discription}}</div>
     <div class="news-item-details"  :class="isEven ? 'news-item-details-even' : 'news-item-details'">
-      展示详情
+      {{productInfo.name}}
       <i class="el-icon-right" />
     </div>
   </div>
@@ -74,8 +74,8 @@ export default {
     margin-bottom: 30px;
   }
   .iconPic {
-    width: 64PX;
-    height: 64PX;
+    width: 208PX;
+    height: 208PX;
   }
    .news-item-details, .news-item-details-even{
       cursor: pointer;
@@ -83,7 +83,8 @@ export default {
       font-size: 16PX;
       padding: 25PX 0;
       // border: 1px solid red;
-      background: #00c3ed;
+      // background: #00c3ed;
+      background: #002E5A;
       width: 100%;
       line-height: 16PX;
       margin-top:40px;

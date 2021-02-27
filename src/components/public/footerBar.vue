@@ -26,7 +26,7 @@
       </div>
       <div class="contactWay">
         <p class="main" :class="{longMain: item.name === '地址'}" v-for="(item, index) in footerContactWay" :key="item + index">
-        <span class="name" :class="{longInfo: item.name === '地址'}">{{item.name + ':'}}</span> <span :class="{longInfo: item.name === '地址'}" class="tel">{{item.contactWay}}</span>
+        <span class="name" :class="{longInfo: item.name === '地址'}">{{item.name + ':'}}</span> <span :class="{address: item.name === '地址'}" class="tel">{{item.contactWay}}</span>
         </p>
       </div>
     </div>
@@ -184,14 +184,23 @@ export default {
           font-weight: 300;
          }
         .tel{
-          float: right;
+          float: left;
           color: #ccc;
+          margin-left: 40px;
         }
         .longInfo{
-          width: 100%;
+          width: 13%;
           text-align: left;
           height: 25PX;
           line-height: 25PX;
+        }
+        .address{
+          width: 82%;
+          text-align: left;
+          height: 25PX;
+          line-height: 25PX;
+          font-size: 60px;
+          margin-left: 0px;
         }
        }
        .longMain{

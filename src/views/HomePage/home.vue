@@ -163,8 +163,8 @@ export default {
       numberDanceList: [
         { name: "成立", iconUrl: `smile.png`, num: 2012 },
         { name: "合作客户", iconUrl: `rocket.png`, num: 1010 },
-        { name: "员工", iconUrl: `worker.png`, num: 96 },
-        { name: "获奖", iconUrl: `medal.png`, num: 25 }
+        { name: "员工", iconUrl: `worker.png`, num: 50 },
+        { name: "荣誉", iconUrl: `medal.png`, num: 25 }
       ],
       mainProductList: [
         {

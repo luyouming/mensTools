@@ -135,7 +135,8 @@ export default {
         font-size: 20PX;
         z-index: 12;
         opacity: 0;
-        background: #00c3ed;
+        // background: #00c3ed;
+        background: #002E5A;
         transition: all 0.4s ease-in-out;
         position: absolute;
         display: flex;

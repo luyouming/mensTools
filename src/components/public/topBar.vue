@@ -87,7 +87,8 @@ export default {
           // { name: '所有新闻', path: '/news/all'},
           // { name: '新闻详情', path: '/news/details'}
         ]},
-        { name: '联系我们', path: '/contactus', isSubShow:false}
+        { name: '联系我们', path: '/contactus', isSubShow:false},
+        { name: '合作伙伴', path: '/goToMenstools', isSubShow:false}
         // { name: '联系我们', path: '/contactus', isSubShow:false, child: [
         //   { name: '联系我们', path: '/contactus/index'},
         //   { name: '百度地图', path: '/contactus/address'}
@@ -102,6 +103,9 @@ export default {
     gotoPage(path, hideMenu){ // hideMenu是弥补本页刷新的情况下，把菜单隐藏，否则本页刷新时用户体验不佳
       console.log(path)
       // this.$router.push({path})
+      if (path === '/goToMenstools') {
+        return window.open('http://www.rdmicro.com', "_blank")
+      }
       if (hideMenu) {this.showVerticalMenu = false}
       window.scrollTo(0, 0)
       this.$emit('changePage', path)
