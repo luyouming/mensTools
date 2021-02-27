@@ -233,11 +233,11 @@ export default {
     // and (max-width:2400px)  pc端 这里不需要上限
     @media screen and (min-width:1200px){
       .swiper-Box {
-        height: 600PX;
+        height: 400PX;
         .swiper-container {
-          height: 600PX;
+          height: 400PX;
           .swiper-wrapper {
-           height: 600PX;
+           height: 400PX;
           }  
         }
       }
